@@ -1,21 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+body{
+    overflow-x: hidden!important;
+    background-color: #F3F3F3;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html{
+    font-size: 16px;
+    overflow-x: hidden!important;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+h1{
+    font-family: "Roboto Mono", serif;
+    font-style: normal;
+    font-size: 128px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 110px;
+    letter-spacing: -2px;
+}
+
+h2{
+    font-family: "Roboto Mono", serif;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3{
+    font-family: "Roboto Mono", serif;
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+p{
+    font-family: "Roboto Mono", serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.gridLayout{
+    grid-template-columns: repeat(11, minmax(0, 1fr));
+    gap:20px;
+}
+
+.swiper-slide {
+    height: auto!important;
+}
+
+.swiper-pagination{
+    position: static!important;
+    margin-top: 40px;
+}
+
+.swiper-pagination-bullet{
+    background-color: transparent !important; 
+    width: 10px!important; 
+    height: 10px!important;
+    border-radius: 100%;
+    border: solid 1px black!important;
+    transition: 0.5s !important;
+    opacity: 1!important;
+}
+
+.swiper-pagination-bullet:hover{
+    background-color: black !important; 
+    transition: 0.5s !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: black!important;
+    transition: 0.5s !important;
+}
+
+
+.swiper-room .swiper-pagination{
+    margin-top: -20px!important;
+    z-index: 10;
+    position: relative!important;
+}
+
+.swiper-room .swiper-pagination-bullet{
+    background-color: #FFFFFF!important;
+    border: none!important
+}
+
+.swiper-room .swiper-pagination-bullet-active{
+    background-color: black!important;
+    transition: 0.5s !important;
 }
