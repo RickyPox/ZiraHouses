@@ -5,9 +5,9 @@ import { notFound } from "next/navigation";
 export async function generateStaticParams() {
     return pages.map((page) => ({ path: page.path }));
 }
-
-export default function Pagina({ params }: { params: { path: string } }) {
-    const { path } = params;
+type Params = Promise<{ path: string }>;
+export default async function Pagina({ params }: { params: Params }) {
+    const { path } = await params;
     const page = pages.find((p) => p.path === path);
 
     if (!page) {
