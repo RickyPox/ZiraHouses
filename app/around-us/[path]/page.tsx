@@ -1,6 +1,9 @@
 import pages from "@/arrays/pages";
 import Card from "@/components/card";
+import Masonry from "react-masonry-css";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import MansonryLayout from "@/components/masonry";
 
 export async function generateStaticParams() {
     return pages.map((page) => ({ path: page.path }));
@@ -33,17 +36,7 @@ export default async function Pagina({ params }: { params: Params }) {
                     </div>
                 </div>
             </div>
-            <div className="sm:columns-2 lg:columns-3 space-y-[20px] mt-[100px] common-margin">
-                {page.content.map((content, i) => (
-                    <div key={i} className="break-inside-avoid">
-                        <Card
-                            title={content.title}
-                            text={content.text}
-                            img={content.image}
-                        />
-                    </div>
-                ))}
-            </div>
+            <MansonryLayout content={page.content}></MansonryLayout>
         </div>
     );
 }

@@ -2,6 +2,7 @@ import Button from "@/components/button";
 import Card from "@/components/card";
 import Reviews from "@/components/reviews";
 import Rules from "@/components/rules";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -24,35 +25,42 @@ export default function Home() {
                                 We are Zira Houses, the best house in Silver
                                 Coast, Portugal
                             </p>
-                            <Button className="mt-[50px]"></Button>
+                            <Button
+                                className="mt-[50px]"
+                                text="Book with us"
+                                href="#"
+                            ></Button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center" id="trigger">
                 <div className="max-w-[1920px] col-start-1 col-span-9 lg:grid grid-cols-9 flex flex-col lg:gap-y-0 gap-y-[50px] gap-x-[20px] pt-[100px] common-margin">
                     <Card
                         className="col-span-3"
-                        Card
                         title="About the House"
                         img="/Bed.png"
                         text="Welcome to Zira Houses, the best family-friendly accommodation on Portugal’s Silver Coast. Nestled in Burinhosa village, it’s the perfect retreat to relax, disconnect, and explore the stunning Oeste region."
-                    ></Card>
+                    >
+                        <Button text="See more" href="/about"></Button>
+                    </Card>
                     <Card
                         className="col-span-3"
-                        Card
                         title="The Silver Coast"
                         img="/Beach.png"
                         text="Discover Portugal’s Silver Coast, a hidden gem where golden beaches, scenic cliffs, and charming seaside villages create the perfect escape. Located between Lisbon and Porto, this breathtaking region offers unspoiled coastlines, world-class surf spots, rich cultural heritage, and fresh seafood delights."
-                    ></Card>
+                    >
+                        <Button text="See more" href="/around-us"></Button>
+                    </Card>
                     <Card
                         className="col-span-3"
-                        Card
-                        title="About Us"
+                        title="Contacts"
                         img="/Garden.png"
                         text="I’m Mariana, a proud Superhost on Airbnb with over 10 years of experience hosting guests at Zira Houses, a family-friendly accommodation on Portugal’s Silver Coast. My mission is to provide families with a relaxing seaside getaway in a peaceful, private setting, ensuring a memorable and comfortable stay."
-                    ></Card>
+                    >
+                        <Button text="See more" href="#"></Button>
+                    </Card>
                 </div>
             </div>
             <div className="flex justify-center">
