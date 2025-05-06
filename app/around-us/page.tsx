@@ -1,4 +1,4 @@
-import pages from "@/arrays/pages";
+import around from "@/arrays/around";
 import Card from "@/components/card";
 
 export default function AroundUs() {
@@ -56,8 +56,8 @@ export default function AroundUs() {
                 </div>
             </div>
             <div className="flex justify-center">
-                <div className="col-start-1 col-span-9 lg:grid grid-cols-9 flex flex-col lg:gap-y-0 gap-y-[50px] gap-x-[20px] pt-[100px] common-margin">
-                    {pages.map((page, i) => (
+                <div className="col-start-1 col-span-9 lg:grid grid-cols-9 flex flex-col lg:gap-y-[20px] gap-y-[50px] gap-x-[20px] pt-[100px] common-margin">
+                    {around.map((page, i) => (
                         <div key={i} className="col-span-3">
                             <Card
                                 title={page.title}

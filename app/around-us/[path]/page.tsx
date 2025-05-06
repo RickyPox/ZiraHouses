@@ -1,17 +1,14 @@
-import pages from "@/arrays/pages";
-import Card from "@/components/card";
-import Masonry from "react-masonry-css";
-import Link from "next/link";
+import around from "@/arrays/around";
 import { notFound } from "next/navigation";
 import MansonryLayout from "@/components/masonry";
 
 export async function generateStaticParams() {
-    return pages.map((page) => ({ path: page.path }));
+    return around.map((page) => ({ path: page.path }));
 }
 type Params = Promise<{ path: string }>;
 export default async function Pagina({ params }: { params: Params }) {
     const { path } = await params;
-    const page = pages.find((p) => p.path === path);
+    const page = around.find((p) => p.path === path);
 
     if (!page) {
         notFound();

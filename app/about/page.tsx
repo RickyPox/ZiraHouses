@@ -3,7 +3,7 @@ import rooms from "@/arrays/rooms";
 
 export default function About() {
     return (
-        <div className="">
+        <div>
             <div className="relative col-start-1 col-span-full">
                 <div className="relative">
                     <div className="bg-black/30 w-full h-full absolute top-0 left-0" />
@@ -39,7 +39,7 @@ export default function About() {
                                 disconnect, and explore the stunning Oeste
                                 region.
                             </p>
-                            <p>
+                            <p className="mt-4">
                                 Our cozy and comfortable house features
                                 everything you need for a memorable family
                                 vacation, including spacious living areas, a
@@ -50,7 +50,7 @@ export default function About() {
                                 offers the perfect setting for creating
                                 unforgettable moments.
                             </p>
-                            <p>
+                            <p className="mt-4">
                                 With easy access to golden beaches, scenic
                                 nature trails, and charming towns like Nazaré,
                                 São Pedro de Moel, Paredes da Vitória, and São
