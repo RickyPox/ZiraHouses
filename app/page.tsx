@@ -28,7 +28,7 @@ export default function Home() {
                             <Button
                                 className="mt-[50px]"
                                 text="Book with us"
-                                href="#"
+                                href="https://www.airbnb.com/rooms/904972187690070709?source_impression_id=p3_1746637459_P3IWiTHiExUXzYt5"
                             ></Button>
                         </div>
                     </div>

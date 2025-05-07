@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { MotionConfig, motion } from "framer-motion";
 
-export default function AnimatedHamburgerButton() {
-    const [active, setActive] = useState(false);
+export default function AnimatedHamburgerButton({ active, setActive }: any) {
+    const [isHovered, setIsHovered] = useState(false);
     return (
         <MotionConfig
             transition={{
@@ -13,33 +13,37 @@ export default function AnimatedHamburgerButton() {
             <motion.button
                 initial={false}
                 animate={active ? "open" : "closed"}
-                onClick={() => setActive((pv) => !pv)}
-                className="relative h-20 w-20 rounded-full transition-colors"
+                onClick={() => setActive((prev: any) => !prev)}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                className="relative sm:h-20 sm:w-20 h-10 w-10  rounded-full transition-colors"
             >
                 <motion.span
                     variants={VARIANTS.top}
-                    className={`absolute h-[3px] w-10 ${
+                    className={`absolute h-[3px] sm:w-10 w-5 ${
                         active ? "bg-black" : "bg-white"
                     }`}
                     style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
                 />
                 <motion.span
                     variants={VARIANTS.middle}
-                    className={`absolute h-[3px] w-10 ${
+                    className={`absolute h-[3px] sm:w-10 w-5 ${
                         active ? "bg-black" : "bg-white"
                     }`}
                     style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
                 />
                 <motion.span
                     variants={VARIANTS.bottom}
-                    className={`absolute h-[3px] w-5 ${
+                    className={`absolute h-[3px]  ${
+                        isHovered ? "w-5 " : "sm:w-10 w-5"
+                    } ${
                         active ? "bg-black hidden" : "bg-white block"
-                    }`}
+                    } duration-300`}
                     style={{
                         x: "-50%",
                         y: "50%",
                         bottom: "35%",
-                        left: "calc(50% + 10px)",
+                        left: "50%",
                     }}
                 />
             </motion.button>
@@ -75,7 +79,6 @@ const VARIANTS = {
         closed: {
             rotate: ["45deg", "0deg", "0deg"],
             bottom: ["50%", "50%", "35%"],
-            left: "calc(50% + 10px)",
         },
     },
 };

@@ -22,7 +22,9 @@ export default function RootLayout({
                 <Navbar></Navbar>
                 {children}
                 <FloatingButton></FloatingButton>
-                <Footer></Footer>
+                <div>
+                    <Footer></Footer>
+                </div>
             </body>
         </html>
     );

@@ -2,8 +2,10 @@ const around = [
     {
         path: "art-culture",
         title: "Art & Culture",
-        description: "",
-        img: "/Bed.png",
+        description:
+            "Immerse yourself in the region’s rich cultural heritage. From traditional festivals and local crafts to historical landmarks and museums, discover the unique blend of history and creativity that defines the heart of central Portugal.",
+        img: "/around/art-culture.jpg",
+
         content: [
             {
                 title: "Leiria Castle",
@@ -101,8 +103,9 @@ const around = [
     {
         path: "beaches",
         title: "Beaches",
-        description: "",
-        img: "/Bed.png",
+        description:
+            "Just a short drive from Burinhosa, you'll find stunning Atlantic beaches perfect for relaxing, surfing, or enjoying breathtaking sunsets. Explore the coastal charm of spots like Nazaré, São Pedro de Moel, and Praia da Vieira.",
+        img: "/around/beach.png",
         content: [
             {
                 title: "Nazaré Beach",
@@ -169,8 +172,9 @@ const around = [
     {
         path: "restaurants",
         title: "Restaurants",
-        description: "",
-        img: "/Bed.png",
+        description:
+            "Savor the flavors of the region with a variety of local restaurants offering fresh seafood, traditional Portuguese dishes, and cozy atmospheres. Whether you’re looking for a casual bite or a fine dining experience, there's something for every taste.",
+        img: "/around/restaurant.jpg",
         content: [
             {
                 title: "Varanda do Casal",
@@ -269,8 +273,9 @@ const around = [
     {
         path: "trails",
         title: "Trails",
-        description: "",
-        img: "/Bed.png",
+        description:
+            "Surrounded by nature, Burinhosa is a gateway to scenic walking and cycling trails through forests, dunes, and coastal landscapes. Ideal for outdoor lovers seeking tranquility, fresh air, and a closer connection to the land.",
+        img: "/around/trails.jpeg",
         content: [
             {
                 title: "Burinhosa – Paredes de Vitória Trail",
@@ -337,8 +342,9 @@ const around = [
     {
         path: "cities",
         title: "Cities",
-        description: "",
-        img: "/Bed.png",
+        description:
+            "Within a 40km radius, explore charming cities and towns such as Alcobaça, Leiria, Batalha, and Nazaré. Each offers its own story, with historic sites, vibrant local markets, and unique architecture worth discovering.",
+        img: "/around/cities.jpg",
         content: [
             {
                 title: "Leiria",

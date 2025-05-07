@@ -1,4 +1,5 @@
 import around from "@/arrays/around";
+import Button from "@/components/button";
 import Card from "@/components/card";
 
 export default function AroundUs() {
@@ -48,9 +49,9 @@ export default function AroundUs() {
                             </p>
                         </div>
                         <p className="sm:col-start-2 sm:col-span-7 col-start-1 col-span-full font-bold text-center px-[20px]">
-                            Consectetur venenatis lacinia ipsum vel amet sit
-                            cras. Vehicula velit ac leo augue. Morbi consequat
-                            enim pellentesque morbi aliquam amet.
+                            Experience the true essence of the silver coast
+                            where nature, history, and seaside beauty come
+                            together.
                         </p>
                     </div>
                 </div>
@@ -63,7 +64,12 @@ export default function AroundUs() {
                                 title={page.title}
                                 text={page.description}
                                 img={page.img}
-                            />
+                            >
+                                <Button
+                                    text="See more"
+                                    href={`around-us/${page.path}`}
+                                ></Button>
+                            </Card>
                         </div>
                     ))}
                 </div>

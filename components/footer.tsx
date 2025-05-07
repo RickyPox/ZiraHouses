@@ -7,9 +7,9 @@ import { useState } from "react";
 export default function Footer() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     return (
-        <div className="bg-black w-screen grid gridLayout">
-            <div className="col-start-2 col-span-9 flex items-center justify-between">
-                <h1 className="text-[48px] text-white uppercase">
+        <div className="bg-black w-screen grid gridLayout lg:py-[20px] py-[50px]">
+            <div className="col-start-2 col-span-9 flex lg:flex-row flex-col lg:space-y-0 space-y-[50px] items-center justify-between">
+                <h1 className="text-white uppercase sm:text-[48px] text-[30px]">
                     ZIRA HOUSES
                 </h1>
                 {footer.map((item, i) => (
@@ -34,7 +34,6 @@ export default function Footer() {
                         </Link>
                     </div>
                 ))}
-
                 <div className="flex space-x-[50px]">
                     <Link href="#">
                         <svg

@@ -21,8 +21,8 @@ export default async function Pagina({ params }: { params: Params }) {
                     <div className="bg-black/30 w-full h-full absolute top-0 left-0" />
                     <img
                         className="w-full max-h-[900px]"
-                        src="/Bed.png"
-                        alt="Background"
+                        src={page.img}
+                        alt={`${page.title}_img`}
                     />
                 </div>
                 <div className="flex justify-center">

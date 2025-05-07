@@ -39,7 +39,10 @@ export default function FloatingButton() {
                         exit={{ scale: 0, rotate: 90 }}
                         className="fixed right-0 bottom-[20%] z-20 origin-top-right "
                     >
-                        <Button text="Book with us" href="#"></Button>
+                        <Button
+                            text="Book with us"
+                            href="https://www.airbnb.com/rooms/904972187690070709?source_impression_id=p3_1746637459_P3IWiTHiExUXzYt5"
+                        ></Button>
                     </motion.div>
                 )}
             </AnimatePresence>

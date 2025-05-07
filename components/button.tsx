@@ -1,15 +1,26 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Button(props: any) {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <div className="flex">
             <Link href={props.href ? props.href : "#"} target="_blank">
                 <div
-                    className={`${props.className} bg-[#000000]  p-[8px] flex `}
+                    className={`${
+                        props.className
+                    } bg-[#000000]  p-[8px] flex duration-300 ${
+                        isHovered ? "scale-110" : "scale-100"
+                    }`}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                 >
                     <div className="flex justify-center items-center space-x-[10px]">
                         <p className="text-white">{props.text}</p>
                         <svg
+                            className={`${isHovered ? "hovered_button" : ""}`}
                             width="16"
                             height="18"
                             viewBox="0 0 16 18"
