@@ -9,7 +9,7 @@ const faq = [
                     <>
                         You can book directly through{" "}
                         <a
-                            href="https://www.airbnb.com/"
+                            href="https://www.airbnb.com/rooms/904972187690070709?source_impression_id=p3_1746637459_P3IWiTHiExUXzYt5"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="underline"
