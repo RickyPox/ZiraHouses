@@ -18,7 +18,11 @@ export default function Navbar() {
         <div className="relative text-white z-30 flex">
             <div className="grid grid-cols-11 justify-start  absolute z-30 top-0 w-screen items-center">
                 <div className="col-start-2 col-span-1 lg:flex hidden justify-between items-center ">
-                    <Link href="#">
+                    <Link
+                        href="https://pin.it/tyZDt1SXf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <svg
                             width="16"
                             height="20"
@@ -32,7 +36,11 @@ export default function Navbar() {
                             />
                         </svg>
                     </Link>
-                    <Link href="#">
+                    <Link
+                        href="https://www.instagram.com/zira.houses?igsh=MXJidmV6Zm5xb2dnZw%3D%3D&utm_source=qr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <svg
                             width="20"
                             height="20"
