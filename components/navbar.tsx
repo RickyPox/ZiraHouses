@@ -139,7 +139,11 @@ export default function Navbar() {
                                     </Link>
                                 ))}
                                 <div className="flex lg:hidden space-x-[50px]">
-                                    <Link href="#">
+                                    <Link
+                                        href="https://pin.it/tyZDt1SXf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <svg
                                             width="16"
                                             height="20"
@@ -155,7 +159,11 @@ export default function Navbar() {
                                             />
                                         </svg>
                                     </Link>
-                                    <Link href="#">
+                                    <Link
+                                        href="https://www.instagram.com/zira.houses?igsh=MXJidmV6Zm5xb2dnZw%3D%3D&utm_source=qr"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <svg
                                             width="20"
                                             height="20"
