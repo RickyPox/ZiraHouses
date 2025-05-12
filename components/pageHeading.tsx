@@ -10,21 +10,24 @@ export default function PageHeading(props: any) {
         const updateMarginTop = () => {
             if (whiteBoxRef.current) {
                 const height = whiteBoxRef.current.offsetHeight;
-                setMarginTopValue(height / 2);
+                const isLargeScreen = window.innerWidth >= 1024; // lg breakpoint
+
+                if (isLargeScreen) {
+                    setMarginTopValue(height / 2);
+                } else {
+                    setMarginTopValue(0);
+                }
             }
         };
 
-        // Calcular a altura inicial
-        updateMarginTop(); // Chamada inicial para definir o marginTop correto
-
-        // Adicionar listener de resize
+        updateMarginTop();
         window.addEventListener("resize", updateMarginTop);
 
-        // Remover listener quando o componente for desmontado
         return () => {
             window.removeEventListener("resize", updateMarginTop);
         };
     }, []);
+
     return (
         <div>
             <div className="relative">
@@ -36,23 +39,28 @@ export default function PageHeading(props: any) {
                 />
             </div>
             <div className="flex justify-center">
-                <div className="max-w-[1920px] lg:grid gridLayout ">
+                <div className="max-w-[1920px] lg:grid gridLayout">
                     <div
                         ref={whiteBoxRef}
                         className="relative col-start-2 col-span-9 grid grid-cols-9 bg-white py-[30px] gap-y-[40px] z-20 lg:mx-0 mx-[10px]"
-                        style={{ marginTop: `-${marginTopValue}px` }}
+                        style={{
+                            marginTop:
+                                marginTopValue > 0
+                                    ? `-${marginTopValue}px`
+                                    : "-50px",
+                        }}
                     >
                         <h2 className="col-span-full text-center px-[20px]">
                             {props.title}
                         </h2>
-                        <div className="sm:col-start-2 sm:col-span-7 col-start-1 col-span-full px-[20px] ">
+                        <div className="lg:col-start-2 lg:col-span-7 col-start-1 col-span-full px-[20px] ">
                             {props.children}
                             <div className="flex w-full items-center justify-center">
                                 <Button
                                     className="mt-[50px]"
                                     text="Book with us"
                                     href="https://www.airbnb.com/rooms/904972187690070709?source_impression_id=p3_1746637459_P3IWiTHiExUXzYt5"
-                                ></Button>
+                                />
                             </div>
                         </div>
                     </div>
