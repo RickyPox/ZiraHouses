@@ -35,7 +35,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="flex justify-center" id="trigger">
+            <div className="flex justify-center">
                 <div className="max-w-[1920px] col-start-1 col-span-9 lg:grid grid-cols-9 flex flex-col lg:gap-y-0 gap-y-[50px] gap-x-[20px] pt-[100px] common-margin">
                     {pages.map((page, i) => (
                         <Card

@@ -1,6 +1,7 @@
 import around from "@/arrays/around";
 import { notFound } from "next/navigation";
 import MansonryLayout from "@/components/masonry";
+import PageHeading from "@/components/pageHeading";
 
 export async function generateStaticParams() {
     return around.map((page) => ({ path: page.path }));
@@ -15,24 +16,11 @@ export default async function Pagina({ params }: { params: Params }) {
     }
 
     return (
-        <div>
-            <div className="relative col-start-1 col-span-full">
-                <div className="relative">
-                    <div className="bg-black/30 w-full h-full absolute top-0 left-0" />
-                    <img
-                        className="w-full max-h-[900px]"
-                        src={page.img}
-                        alt={`${page.title}_img`}
-                    />
-                </div>
-                <div className="flex justify-center">
-                    <div className="absolute top-[30%] grid gridLayout w-full max-w-[1920px]">
-                        <div className="col-start-1 col-span-full text-center">
-                            <h1 className="text-white">{page.title}</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="mb-[100px]">
+            <PageHeading img={page.img} title={page.title}>
+                <p>{page.description}</p>
+            </PageHeading>
+
             <MansonryLayout content={page.content}></MansonryLayout>
         </div>
     );

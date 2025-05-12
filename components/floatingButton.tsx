@@ -6,18 +6,19 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export default function FloatingButton() {
     const [isVisible, setIsVisible] = useState(false);
-
     useEffect(() => {
-        const triggerElement = document.getElementById("trigger");
-
         const handleScroll = () => {
-            if (triggerElement) {
-                const rect = triggerElement.getBoundingClientRect();
-                if (rect.top <= 0) {
-                    setIsVisible(true);
-                } else {
-                    setIsVisible(false);
-                }
+            const scrollHeight =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+            const scrolled = window.scrollY;
+            const tenPercentHeight = scrollHeight * 0.1;
+            console.log(tenPercentHeight);
+
+            if (scrolled > tenPercentHeight) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
             }
         };
 
@@ -37,7 +38,7 @@ export default function FloatingButton() {
                         initial={{ scale: 0, rotate: 90 }}
                         animate={{ scale: 1, rotate: 90 }}
                         exit={{ scale: 0, rotate: 90 }}
-                        className="fixed right-0 bottom-[20%] z-20 origin-top-right "
+                        className="fixed right-0 bottom-[50%] z-20 origin-top-right "
                     >
                         <Button
                             text="Book with us"
