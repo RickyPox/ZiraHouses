@@ -15,14 +15,14 @@ export default function BigCard(props: any) {
                         slidesPerView={1}
                         pagination={{ clickable: true }}
                         modules={[Pagination]}
-                        className="h-full swiper-room"
+                        className="h-full swiper-room max-h-[400px] lg:max-h-full"
                     >
                         {props.img.map((image: any, i: any) => (
-                            <SwiperSlide key={i} className="h-full">
+                            <SwiperSlide key={i} className="h-full w-full">
                                 <img
                                     src={image}
                                     alt={`Image ${i + 1}`}
-                                    className="h-full object-cover"
+                                    className="h-full w-full object-cover "
                                 />
                             </SwiperSlide>
                         ))}

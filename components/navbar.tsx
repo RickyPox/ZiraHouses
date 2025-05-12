@@ -56,7 +56,7 @@ export default function Navbar() {
                                 backgroundColor: "rgba(255,255,255,0.9)",
                             }}
                             exit={{ width: 0 }}
-                            className="grid gridLayout h-screen fixed top-0 right-0 z-20  pt-[300px]"
+                            className="grid gridLayout h-screen fixed top-0 right-0 z-20  pt-[100px]"
                         >
                             <div className="col-start-2 col-span-9 flex flex-col items-center space-y-[50px]">
                                 <div className="flex space-x-[50px] lg:hidden">
@@ -123,8 +123,8 @@ export default function Navbar() {
                                     />
                                 </Link>
                                 <div className="flex lg:hidden space-x-[50px]">
-                                    <Pinterest />
-                                    <Instagram />
+                                    <Pinterest black />
+                                    <Instagram black />
                                 </div>
                             </div>
                         </motion.div>
