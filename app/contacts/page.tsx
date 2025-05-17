@@ -22,6 +22,13 @@ export default function Contacts() {
                         unwind, Zira Houses offers the perfect base for your
                         next family vacation.
                     </p>
+
+                    <p className="font-bold text-center">
+                        You can contact me at:{" "}
+                        <a href="mailto:info@zirahouses.com">
+                            info@zirahouses.com
+                        </a>
+                    </p>
                 </PageHeading>
             </div>
             <iframe

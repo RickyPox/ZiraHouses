@@ -3,6 +3,7 @@
 import Masonry from "react-masonry-css";
 import Card from "@/components/card";
 import Link from "next/link";
+import Button from "./button";
 
 interface ContentItem {
     title: string;
@@ -34,14 +35,10 @@ export default function MasonryDisplay({ content }: MasonryDisplayProps) {
                     <Card title={item.title} text={item.text} img={item.image}>
                         {item.address && <p>{item.address}</p>}
                         {item.website && (
-                            <Link
+                            <Button
                                 href={item.website}
-                                className="hover:underline block break-words"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {item.website}
-                            </Link>
+                                text="See more"
+                            ></Button>
                         )}
                     </Card>
                 </div>

@@ -15,7 +15,6 @@ const around = [
                 image: "/Bed.png",
                 address: " Largo do Mosteiro, 2460-018 Alcobaça",
                 website: "https://www.mosteiroalcobaca.gov.pt",
-                extra: "whc.unesco.org/en/list/505A",
                 distance: "Approx. 15 min by car",
             },
             {
@@ -25,7 +24,7 @@ const around = [
                 address:
                     "Mosteiro de Santa Maria da Vitória, Largo Infante Dom Henrique, 2440-109 Batalha",
                 website: "whc.unesco.org/en/list/264",
-                extra: "",
+
                 distance: " Approx. 30 min by car",
             },
             {
@@ -34,7 +33,7 @@ const around = [
                 image: "/Bed.png",
                 address: "Largo Goa, Damão e Diu, 2440-901 Batalha",
                 website: "http://www.museubatalha.com",
-                extra: "",
+
                 distance: "Approx. 30 min by car",
             },
             {
@@ -43,7 +42,7 @@ const around = [
                 image: "/Bed.png",
                 address: "Rua do Castelo, 2400-235 Leiria",
                 website: "https://www.visiteleiria.pt",
-                extra: "",
+
                 distance: "Approx. 25 min by car",
             },
             {
@@ -53,7 +52,7 @@ const around = [
                 address: "Largo de São Pedro, Leiria",
                 website:
                     "https://www.cm-leiria.pt/areas-de-atividade/cultura/museus/m-i-mo-museu-da-imagem-em-movimento",
-                extra: "",
+
                 distance: "Approx. 20 min by car",
             },
             {
@@ -62,7 +61,7 @@ const around = [
                 image: "/Bed.png",
                 address: "Rua Fábrica do Papel, nº 13, 2410-103 Leiria",
                 website: "https://www.visiteleiria.pt",
-                extra: "",
+
                 distance: "Approx. 18 min by car",
             },
             {
@@ -71,7 +70,7 @@ const around = [
                 image: "/Bed.png",
                 address: "Largo de Santana, Leiria",
                 website: "www.cm-leiria.pt",
-                extra: "",
+
                 distance: "Approx. 20 minutes by car",
             },
             {
@@ -80,7 +79,7 @@ const around = [
                 image: "/Bed.png",
                 address: "Rua 1º de Maio, 2430-184 Marinha Grande",
                 website: "http://www.museudovidro.pt",
-                extra: "",
+
                 distance: "Approx. 15 min by car",
             },
             {
@@ -89,7 +88,7 @@ const around = [
                 image: "/Bed.png",
                 address: "Praça Sousa Oliveira, 2450-065 Nazaré",
                 website: "http://www.santuarionazare.pt",
-                extra: "",
+
                 distance: "Approx. 25 minutes by car",
             },
             {
@@ -98,7 +97,7 @@ const around = [
                 image: "/Bed.png",
                 address: "Rua do Castelo, 2510-999 Óbidos",
                 website: "http://www.obidos.pt/en/castle",
-                extra: "",
+
                 distance: "Approx. 40 minutes by car ",
             },
             {
@@ -107,7 +106,7 @@ const around = [
                 image: "/Bed.png",
                 address: "Parque D. Carlos I, Caldas da Rainha",
                 website: "",
-                extra: "",
+
                 distance: "Approx. 40 minutes by car",
             },
             {
@@ -117,7 +116,7 @@ const around = [
                 address: "Museu José Malhoa, Caldas da Rainha",
                 website:
                     "https://www.museusemonumentos.pt/pt/museus-e-monumentos/museu-jose-malhoa?fbclid=IwY2xjawKOKh1leHRuA2FlbQIxMABicmlkETFjNGNXSWg3YXFEa09ZNHYwAR4adHqz3Lqz5mya6uk1LnoUXOyDAk3nXis46KG417AAr38a5XStXfRL4wwRsQ_aem_yMbVee_ySXrmBo7kZxIMgQ",
-                extra: "",
+
                 distance: "Approx. 40 minutes by car",
             },
             {
@@ -126,7 +125,7 @@ const around = [
                 image: "/Bed.png",
                 address: "Fátima, Portugal",
                 website: "",
-                extra: "",
+
                 distance: "Approx. 1 hour by car",
             },
             {
@@ -135,14 +134,14 @@ const around = [
                 image: "/Bed.png",
                 address: "Convento de Cristo, 2300-000 Tomar, Portugal ",
                 website: "http://www.conventocristo.gov.pt/pt/index.php",
-                extra: "",
+
                 distance: "Approx. 1h15 by car",
             },
         ],
     },
     {
-        path: "beaches",
-        title: "Beaches",
+        path: "beach-surf",
+        title: "Beach & Surf",
         description:
             "Just a short drive from Burinhosa, you'll find stunning Atlantic beaches perfect for relaxing, surfing, or enjoying breathtaking sunsets. Explore the coastal charm of spots like Nazaré, São Pedro de Moel, and Praia da Vieira.",
         img: "/around/beach.png",

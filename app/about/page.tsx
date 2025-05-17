@@ -13,7 +13,7 @@ export default function About() {
                     to relax, disconnect, and explore the stunning Oeste region.
                 </p>
 
-                <p>
+                <p className="mt-4">
                     Our cozy and comfortable house features everything you need
                     for a memorable family vacation, including spacious living
                     areas, a fully equipped kitchen, and a beautiful outdoor
@@ -23,7 +23,7 @@ export default function About() {
                     creating unforgettable moments.
                 </p>
 
-                <p>
+                <p className="mt-4">
                     With easy access to golden beaches, scenic nature trails,
                     and charming towns like Nazaré, São Pedro de Moel, Paredes
                     da Vitória, and São Martinho do Porto, Zira Houses is an
@@ -31,7 +31,7 @@ export default function About() {
                     adventure.
                 </p>
 
-                <p className="font-bold text-center">
+                <p className="font-bold text-center mt-4">
                     Relax at Zira Houses, the perfect peaceful escape for
                     families on Portugal’s Silver Coast.
                 </p>

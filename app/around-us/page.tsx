@@ -15,7 +15,7 @@ export default function AroundUs() {
                     surf spots, rich cultural heritage, and fresh seafood
                     delights.
                 </p>
-                <p>
+                <p className="mt-4">
                     From the giant waves of Nazaré and the medieval charm of
                     Óbidos to the tranquil bay of São Martinho do Porto and the
                     forested trails of Paredes da Vitória, the Silver Coast is a

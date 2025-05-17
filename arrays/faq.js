@@ -12,12 +12,20 @@ const faq = [
                             href="https://www.airbnb.com/rooms/904972187690070709?source_impression_id=p3_1746637459_P3IWiTHiExUXzYt5"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="underline"
+                            className="underline bg-black text-white"
+                            style={{ padding: "5px" }}
                         >
                             Airbnb
                         </a>{" "}
-                        or contact us by email to explore alternative booking
-                        options.
+                        or contact us by email:{" "}
+                        <a
+                            href="mailto:info@zirahouses.com"
+                            className="underline bg-black text-white"
+                            style={{ padding: "5px" }}
+                        >
+                            info@zirahouses.com
+                        </a>{" "}
+                        to explore alternative booking options.
                     </>
                 ),
             },
@@ -73,8 +81,26 @@ const faq = [
                 answer: "Yes, we value a personal touch and want to ensure you have a warm welcome. Either the host or a friend/family member will be there to greet you upon arrival, provide a quick tour of the house, and give you helpful tips about the region. Please note, before check-in, we will ask for some personal details in accordance with Portuguese law.",
             },
             {
-                question: "How can I contact the host during my stay?",
-                answer: "You’ll be able to contact us directly via Airbnb messaging or by phone — we’ll share all the contact details before check-in.",
+                question: "How can I contact the host?",
+                answer: (
+                    <>
+                        <p>
+                            You’ll be able to contact us directly via Airbnb
+                            messaging or by phone — we’ll share all the contact
+                            details before check-in.{" "}
+                        </p>
+                        <p>
+                            You can also contact by email:{" "}
+                            <a
+                                href="mailto:info@zirahouses.com"
+                                className="underline bg-black text-white"
+                                style={{ padding: "5px" }}
+                            >
+                                info@zirahouses.com
+                            </a>{" "}
+                        </p>
+                    </>
+                ),
             },
         ],
     },
@@ -199,7 +225,8 @@ const faq = [
                         Please contact us at{" "}
                         <a
                             href="mailto:info@zirahouses.com"
-                            className="underline"
+                            className="underline bg-black text-white"
+                            style={{ padding: "5px" }}
                         >
                             info@zirahouses.com
                         </a>{" "}
