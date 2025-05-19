@@ -1,6 +1,7 @@
 import { distance } from "framer-motion";
 
 const around = [
+    /* ART & CULTURE */
     {
         path: "art-culture",
         title: "Art & Culture",
@@ -139,329 +140,449 @@ const around = [
             },
         ],
     },
+    /* BEACH & SURF */
     {
         path: "beach-surf",
         title: "Beach & Surf",
         description:
-            "Just a short drive from Burinhosa, you'll find stunning Atlantic beaches perfect for relaxing, surfing, or enjoying breathtaking sunsets. Explore the coastal charm of spots like Nazaré, São Pedro de Moel, and Praia da Vieira.",
+            "Portugal boasts some of the world’s most stunning beaches, many just a short drive from Zira Houses. Below, you’ll find a selection of beautiful beaches ranked by driving distance from our location. Whether you’re seeking family-friendly spots, prime surf breaks, or peaceful natural retreats, the Centro-Oeste region offers it all—charming fishing villages, fresh seafood, and breathtaking ocean views await.",
         img: "/around/beach.png",
         content: [
             {
-                title: "Nazaré Beach",
-                text: "Nazaré Beach is world-renowned for its gigantic waves and dramatic coastline. Popular among surfers and tourists alike, it offers a vibrant promenade, traditional fishing boats, and stunning views from the cliffs of Sítio. During the winter, it attracts professional surfers who come to challenge some of the biggest surfable waves on the planet.",
-                image: "/Bed.png",
-                address: "Avenida da República, 2450-101 Nazaré",
-            },
-            {
-                title: "São Martinho do Porto Beach",
-                text: "Located in a naturally sheltered bay, São Martinho do Porto Beach is ideal for families and calm-water swimming. The beach features a charming village atmosphere with restaurants and cafes lining the shore. Its crescent-shaped bay is unique in Portugal and perfect for a relaxing beach day.",
-                image: "/Bed.png",
-                address: "Avenida Marginal, 2460-096 São Martinho do Porto",
-            },
-            {
-                title: "Foz do Arelho Beach",
-                text: "Foz do Arelho Beach is known for its dual personality: a calm lagoon ideal for paddleboarding and families, and the wild Atlantic side favored by surfers. This scenic spot also offers wooden walkways, beach bars, and plenty of space for sunbathing and walks along the coast.",
-                image: "/Bed.png",
-                address: "Avenida do Mar, 2500-500 Foz do Arelho",
-            },
-            {
-                title: "Vieira Beach",
-                text: "Praia da Vieira is a wide sandy beach bordered by a pine forest and a vibrant seaside town. It offers a mix of traditional fishing culture and modern beach facilities, including restaurants, bars, and summer events. The beach is also known for its colorful fishing boats and fresh seafood.",
-                image: "/Bed.png",
-                address: "Avenida Marginal, 2430-696 Vieira de Leiria",
-            },
-            {
-                title: "Pedrógão Beach",
-                text: "Pedrógão Beach offers a laid-back and less crowded atmosphere compared to nearby coastal towns. Surrounded by dunes and pine forests, it is ideal for those seeking a quieter, more natural beach experience. Local restaurants serve fresh fish, and the area is perfect for long beach walks.",
-                image: "/Bed.png",
-                address: "Avenida da Praia, 2425-449 Praia do Pedrógão",
-            },
-            {
-                title: "Paredes da Vitória Beach",
+                title: "Praia da Paredes da Vitória (8min) ",
                 text: "Paredes da Vitória Beach is a stunning and spacious beach, perfect for families and surfers. With cliffs and green hills framing the golden sands, it is a great spot for sunbathing, swimming, and exploring natural rock formations. The surrounding village offers several cafes and local shops.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Family Friendly</p>
+                        <p className="font-bold">- Surf Spot with Classes</p>
+                    </>
+                ),
                 image: "/Bed.png",
                 address: "Rua da Praia, 2450-138 Paredes da Vitória",
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/paredes-da-vitoria/ "
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
             },
             {
-                title: "Vale Furado Beach",
+                title: "Praia da Polvoeira (8min)",
+                text: "A secluded beach surrounded by nature, perfect for those looking to relax and enjoy a peaceful atmosphere.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Quiet Beach</p>
+                        <p className="font-bold">- Nature Spot</p>
+                    </>
+                ),
+                image: "/Bed.png",
+                address: "Praia da Polvoeira, Pataias, 2445 Alcobaça, Portugal",
+            },
+            {
+                title: "Praia Vale Furado (10min)",
                 text: "Tucked beneath golden cliffs and surrounded by nature, Vale Furado Beach is a hidden gem. Accessible via a steep path, this secluded beach offers tranquility, impressive rock formations, and a peaceful retreat from the more touristy spots. Ideal for photography and peaceful contemplation.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Quiet Beach</p>
+                        <p className="font-bold">- Nature Spot</p>
+                    </>
+                ),
                 image: "/Bed.png",
                 address: "Estrada Vale Furado, 2445-017 Alcobaça",
             },
             {
-                title: "Agua de Madeiros Beach",
-                text: "Agua de Madeiros Beach is known for its dramatic cliffs and natural surroundings. It’s a quiet beach ideal for long walks, photography, and enjoying nature. Due to strong currents and rocks, it is not recommended for swimming, but it offers a spectacular coastal experience.",
+                title: "Praia de São Pedro de Moel (12min)",
+                text: "São Pedro de Moel is a charming beach village located in the Leiria Pine Forest. Known for its golden sands and rugged cliffs, it offers a peaceful retreat. Visitors can enjoy stunning ocean views, local seafood, and outdoor activities like surfing.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Family Friendly</p>
+                        <p className="font-bold">- Surf Spot with Classes</p>
+                    </>
+                ),
                 image: "/Bed.png",
-                address: "Rua da Praia, Água de Madeiros, 2445-505 Alcobaça",
+                address: "Praia de São Pedro de Moel, Marinha Grande",
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/sao-pedro-de-moel/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
             },
             {
-                title: "Polvoeira Beach",
-                text: "Polvoeira Beach is a wild and scenic beach surrounded by cliffs, ideal for those looking for peace and unspoiled nature. There are no major tourist facilities here, which keeps the environment natural and pristine. The ocean here can be rough, making it more suitable for experienced swimmers.",
+                title: "Praia da Nazaré – Central Beach (20min)",
+                text: "The main beach of Nazaré has lifeguards, umbrellas for rent, and easy beach access. Calm areas near the breakwater and lots of beachfront amenities make it great for families.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Family Friendly</p>
+                        <p className="font-bold">- Accessible</p>
+                    </>
+                ),
                 image: "/Bed.png",
-                address: "Rua da Polvoeira, 2445-505 Alcobaça",
+                address: "Avenida da República, 2450-101 Nazaré",
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/nazare-forte-sao-miguel-arcanjo-baia/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
             },
             {
-                title: "Falca Beach",
-                text: "Falca Beach is a small and quiet beach nestled between cliffs, popular with locals seeking a peaceful and less crowded alternative. Its golden sands and clear waters make it a great spot for sunbathing and relaxation. The natural beauty of the surrounding cliffs enhances its charm.",
+                title: "Praia do Norte, Nazaré (20 min)",
+                text: "Famous for its giant waves, Praia do Norte is a must-visit for surfers and those fascinated by natural spectacles. Praia do Norte is a legendary beach, known worldwide for its record-breaking giant waves. It's a must-visit for surfers, thrill-seekers, and anyone fascinated by the raw power of nature. The best time to witness the giant waves is between October and March, when Atlantic storms and the unique underwater Nazaré Canyon create the perfect conditions for massive swells.",
+                extratext: (
+                    <>
+                        <p className="font-bold">
+                            - World-Famous for Giant Waves
+                        </p>
+                        <p className="font-bold">
+                            - Surf Spot (Experienced Only)
+                        </p>
+                    </>
+                ),
                 image: "/Bed.png",
-                address: "Rua da Falca, 2445-505 São Martinho do Porto",
-            },
-        ],
-    },
-    {
-        path: "restaurants",
-        title: "Restaurants",
-        description:
-            "Savor the flavors of the region with a variety of local restaurants offering fresh seafood, traditional Portuguese dishes, and cozy atmospheres. Whether you’re looking for a casual bite or a fine dining experience, there's something for every taste.",
-        img: "/around/restaurant.jpg",
-        content: [
-            {
-                title: "Varanda do Casal",
-                text: "Nestled at the entrance of the Schist Village of Casal de São Simão, Varanda do Casal offers traditional Portuguese cuisine with a stunning panoramic view. The rustic ambiance complements dishes like 'bacalhau à lagareiro' and 'cabrito assado'.",
-                image: "/Bed.png",
-                address: "Casal de São Simão, 3260-034 Figueiró dos Vinhos",
-            },
-            {
-                title: "O Celeiro",
-                text: "Located in Reguengo do Fetal, O Celeiro is a family-run restaurant serving authentic Portuguese dishes in a cozy setting. Specialties include grilled meats and regional desserts.",
-                image: "/Bed.png",
-                address: "EN356, 572, Reguengo do Fetal, 2440-000 Batalha",
-            },
-            {
-                title: "Marisqueira Mirandum",
-                text: "Situated in Pombal, Marisqueira Mirandum is renowned for its fresh seafood offerings. The menu features a variety of shellfish dishes, including 'ameijoas à Bulhão Pato' and grilled tiger prawns.",
-                image: "/Bed.png",
-                address: "Rua de Leiria 85, 3100-480 Pombal",
+                address: "Praia do Norte, Nazaré, 2450-076, Portugal",
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/praia-do-norte/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
             },
             {
-                title: "O Caçador",
-                text: "In the heart of Figueiró dos Vinhos, O Caçador offers traditional Portuguese cuisine with a focus on game meats. The rustic decor and hearty dishes provide a warm dining experience.",
+                title: "Praia de Vieira, Marinha Grande (25 min)",
+                text: "Vieira Beach is a large golden sandy beach, perfect for family activities and outdoor fun. With a spacious and safe environment, it’s ideal for games, picnics, and long walks by the sea. The beach provides basic facilities and a peaceful atmosphere, making it a pleasant destination for anyone looking for a relaxing day surrounded by nature.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Family Friendly</p>
+                        <p className="font-bold">- Quiet Beach</p>
+                    </>
+                ),
+                image: "/Bed.png",
+                address: "Praia da Vieira, Marinha Grande",
+
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/praia-da-vieira/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
+            },
+            {
+                title: "Praia de São Martinho do Porto (30 min)",
+                text: "A protected bay with calm waters, perfect for family outings and peaceful walks along the shore. A natural shell-shaped bay with very calm waters, perfect for little ones. Easy access, a flat promenade for strollers, and many nearby cafés and restaurants.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Family Friendly</p>
+                        <p className="font-bold">- Accessible</p>
+                    </>
+                ),
+                image: "/Bed.png",
+                address: "Marginal de Alcobaça, 2460-096 São Martinho do Porto",
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/sao-martinho-do-porto/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
+            },
+            {
+                title: "Praia do Pedrógão (30 min)",
+                text: "Pedrógão Beach is a quiet and beautiful beach with calm waters, perfect for families and those looking for a less crowded experience. Ideal for relaxing, swimming, and enjoying the surrounding nature, this beach provides a peaceful atmosphere away from the hustle and bustle—great for family time or peaceful seaside moments.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Family Friendly</p>
+                        <p className="font-bold">- Quiet Beach</p>
+                    </>
+                ),
+                image: "/Bed.png",
+                address: "Praia do Pedrógão, Leiria",
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/praia-do-pedrogao/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
+            },
+            {
+                title: "Praia de Foz do Arelho - lagoon side (35 min)",
+                text: "",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Family Friendly</p>
+                        <p className="font-bold">- Nature Spot</p>
+                    </>
+                ),
                 image: "/Bed.png",
                 address:
-                    "Rua Major Neutel de Abreu 133, 3260-427 Figueiró dos Vinhos",
+                    "A beautiful beach with both ocean and lagoon views, ideal for swimming, kayaking, and relaxing in a scenic environment. The Óbidos Lagoon offers shallow and warm waters, ideal for kids to play safely. Plenty of space, shaded picnic areas, and family-friendly restaurants nearby.",
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/foz-do-arelho/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
             },
             {
-                title: "Restaurante O Cortiço",
-                text: "Located in Ourém, O Cortiço is known for its regional dishes and welcoming atmosphere. Favorites include 'bacalhau com broa' and 'leitão assado'.",
+                title: "Praia do Osso da Baleia – Ferrel, Peniche (45 min)",
+                text: "Osso da Baleia Beach is a peaceful beach with clear waters and a natural landscape. It’s the perfect spot for those seeking quiet and relaxation by the sea, enjoying calm moments on a less crowded beach surrounded by the natural beauty of the coastline.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Surf Spot</p>
+                    </>
+                ),
                 image: "/Bed.png",
-                address: "Rua Dr. Francisco Sá Carneiro 5, 2490-480 Ourém",
+                address: "Praia do Osso da Baleia, Ferrel, Peniche",
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/praia-osso-da-baleia/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
             },
             {
-                title: "O Barqueiro",
-                text: "Set by the river in Foz do Alge, O Barqueiro specializes in freshwater fish dishes and offers a serene dining experience with picturesque views.",
+                title: "Praia do Baleal, Peniche (50 min)",
+                text: "Baleal Beach, near Peniche, is famous for its consistent waves, ideal for surfers of all levels. The relaxed atmosphere and nearby charming village attract families and nature lovers alike. Beyond surfing, visitors can enjoy swimming, coastal walks, and stunning views of cliffs and wide sandy shores. In summer, the beach offers bars and restaurants, making it perfect for a full day of beach fun and relaxation.",
+                extratext: (
+                    <>
+                        <p className="font-bold">- Family Friendly</p>
+                        <p className="font-bold">- Surf Spot with Classes </p>
+                    </>
+                ),
                 image: "/Bed.png",
-                address: "Foz do Alge, 3260-423 Figueiró dos Vinhos",
-            },
-            {
-                title: "Restaurante Tribeca",
-                text: "Located in Serra d'El Rei, Tribeca offers a fusion of European cuisines in a stylish setting. The menu features dishes like duck confit and seafood risotto.",
-                image: "/Bed.png",
-                address: "Avenida da Serrana 5, 2525-802 Serra d'El Rei",
-            },
-            {
-                title: "Restaurante Piadussa",
-                text: "In the village of São Mamede, Piadussa serves traditional Portuguese meals in a rustic environment. Known for its 'bacalhau à Zé do Pipo' and homemade desserts.",
-                image: "/Bed.png",
-                address: "Rua da Pia do Urso 28, 2495-031 São Mamede",
-            },
-            {
-                title: "Restaurante O Manito",
-                text: "Situated in Almofala de Baixo, O Manito offers regional specialties like 'bacalhau à lagareiro' and 'cozido à portuguesa' in a welcoming atmosphere.",
-                image: "/Bed.png",
-                address:
-                    "Zona Industrial de Almofala de Baixo, 3260-000 Figueiró dos Vinhos",
-            },
-            {
-                title: "Restaurante A Lúria",
-                text: "Located in Alcobaça, A Lúria combines traditional Portuguese flavors with modern culinary techniques. Signature dishes include octopus rice and roasted lamb.",
-                image: "/Bed.png",
-                address: "Rua Frei António Brandão 12, 2460-047 Alcobaça",
-            },
-            {
-                title: "Restaurante O Cortiço",
-                text: "In the town of Ourém, O Cortiço offers a menu rich in regional dishes, emphasizing local ingredients and traditional cooking methods.",
-                image: "/Bed.png",
-                address: "Rua Dr. Francisco Sá Carneiro 5, 2490-480 Ourém",
-            },
-            {
-                title: "Restaurante O Manjar do Marquês",
-                text: "Located in Pombal, O Manjar do Marquês is famous for its 'bacalhau à lagareiro' and extensive wine list, providing a refined dining experience.",
-                image: "/Bed.png",
-                address: "Avenida Heróis do Ultramar 185, 3100-462 Pombal",
-            },
-            {
-                title: "Restaurante O Alcaide",
-                text: "Set in the historic town of Óbidos, O Alcaide offers a romantic ambiance with a menu featuring traditional Portuguese dishes and fine wines.",
-                image: "/Bed.png",
-                address: "Rua Direita 60, 2510-001 Óbidos",
-            },
-            {
-                title: "Restaurante O Casarão",
-                text: "Situated in Batalha, O Casarão is known for its grilled meats and cozy atmosphere, making it a favorite among locals and tourists alike.",
-                image: "/Bed.png",
-                address: "Rua da Freiria 12, 2440-076 Batalha",
-            },
-            {
-                title: "Restaurante O Cortiço",
-                text: "In Ourém, O Cortiço offers a diverse menu with an emphasis on traditional flavors and a selection of regional wines.",
-                image: "/Bed.png",
-                address: "Rua Dr. Francisco Sá Carneiro 5, 2490-480 Ourém",
+                address: "Largo da Praça do Peixe, Ferrel",
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="https://beachcam.meo.pt/livecams/peniche-baleal-panoramica/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
             },
         ],
     },
+    /* LEISURE PARKS */
     {
-        path: "trails",
-        title: "Trails",
+        path: "leisure-park",
+        title: "Leisure Parks",
         description:
-            "Surrounded by nature, Burinhosa is a gateway to scenic walking and cycling trails through forests, dunes, and coastal landscapes. Ideal for outdoor lovers seeking tranquility, fresh air, and a closer connection to the land.",
-        img: "/around/trails.jpeg",
+            "Discover unforgettable family experiences near Zira Houses. From dinosaurs and serene gardens to fun-filled leisure parks, explore our top recommendations—all within 90 minutes’ drive and perfect for all ages.",
+        img: "/around/beach.png",
         content: [
             {
-                title: "Burinhosa – Paredes de Vitória Trail",
-                text: "A 11.6 km coastal trail starting in Burinhosa and leading to Paredes de Vitória beach. This route offers a mix of forest paths and seaside views, making it ideal for hiking and trail running.",
+                title: "Parque dos Monges – Alcobaça (15 min)",
+                text: "Parque dos Monges is a unique theme park inspired by the monastic life of the Cistercian Order. Located in Alcobaça, just 15 minutes from Zira Houses, it offers families a blend of nature, history, and outdoor adventure. The park features a medieval village, a pedagogical farm with native animals, climbing and canoeing activities, and a freshwater aquarium dedicated to the Alcoa River. It's ideal for families looking for an educational and fun experience surrounded by nature.",
                 image: "/Bed.png",
-                address: "Burinhosa, Leiria, Portugal",
+                address: (
+                    <>
+                        <p>GPS: </p>
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Parque+dos+Monges,+R.+Q.ta+das+Freiras+N.%C2%BA+10,+2460-089+Alcoba%C3%A7a/@39.6209397,-9.0881979,28142m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a43afef302bb:0xdbd8b5c0e6e9b04e!2m2!1d-8.9550905!2d39.5409975?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
+                            39.541087, -8.956146
+                        </a>
+                    </>
+                ),
+                website: "http://www.parquedosmonges.com",
             },
             {
-                title: "Moita – Burinhosa Trail",
-                text: "A 21.9 km loop connecting Moita and Burinhosa through forested areas and rural landscapes. Suitable for both hiking and mountain biking enthusiasts.",
+                title: "Pia do Urso Sensory EcoPark - Batalha (20 min)",
+                text: "Charming forest walk with sensory activities for children, including sound tubes and tactile games. Free and stroller-friendly.",
                 image: "/Bed.png",
-                address: "Moita, Leiria, Portugal",
+                address: (
+                    <>
+                        <p>GPS: </p>
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Sensory+Ecopark+of+Pia+do+Urso,+R.+da+Pia+do+Urso+19,+2495-031/@39.6209397,-9.0881979,28142m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd189c449706fdeb:0x6588de0b119f5a0c!2m2!1d-8.7164507!2d39.5979585?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
+                            39.59810657573996, -8.715942658676076
+                        </a>
+                    </>
+                ),
+                website: "http://rotadopatrimonio.pt/pia-do-urso/",
             },
             {
-                title: "Rota das Dunas",
-                text: "A 81 km off-road trail that starts near São Pedro de Moel and extends inland. It features a mix of sandy paths, muddy sections, and technical terrains, perfect for mountain biking adventures.",
+                title: "Bacalhôa Buddha Eden – Garden of Peace (40 min)",
+                text: "Located in Bombarral, Bacalhôa Buddha Eden is Europe's largest oriental garden, spanning over 35 hectares. Created as a tribute to the destroyed Buddhas of Bamyan, this tranquil sanctuary features a harmonious blend of nature, art, and spirituality. Visitors can explore golden Buddha statues, pagodas, terracotta warriors, African sculptures, and serene lakes adorned with koi fish and stone dragons. The garden also showcases contemporary artworks from the Berardo Collection, offering a unique cultural experience.",
                 image: "/Bed.png",
-                address: "São Pedro de Moel, Leiria, Portugal",
+                address: (
+                    <>
+                        <p>GPS: </p>
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Buddha+Eden,+Quinta+dos+Loridos,+2540-420/@39.2625618,-9.1451849,14143m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18ca66b0da2fbd:0x8f0e8583009b5b49!2m2!1d-9.1384902!2d39.2755559?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
+                            39.27777823726978, -9.137803423651427
+                        </a>
+                    </>
+                ),
+                website: "http://www.cm-bombarral.pt",
             },
             {
-                title: "Rota do Vale do Lapedo (PR1 LRA)",
-                text: "A 4.5 km circular trail in Leiria that explores the Lapedo Valley, known for its archaeological significance. It's an easy hike suitable for families and history enthusiasts.",
+                title: "Dino Parque Lourinhã (1h)",
+                text: "Portugal's largest open-air dinosaur museum with over 180 life-size models. Kids can explore dig zones, learn about prehistoric eras, and enjoy interactive exhibits.",
                 image: "/Bed.png",
-                address: "Leiria, Portugal",
+                address: (
+                    <>
+                        <p>GPS: </p>
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Lourinh%C3%A3+Dino+Park,+R.+Vale+dos+Dinossauros+25,+Abelheira,+2530-059+Lourinh%C3%A3/@39.4888477,-9.3138494,56390m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd1f361db837f149:0x5dbc79a75bd1e04c!2m2!1d-9.2934375!2d39.2783785?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
+                            39.286921857525954, -9.29256343502927
+                        </a>
+                    </>
+                ),
+                website: "http://www.dinoparque.pt",
             },
             {
-                title: "Rota da Lagoa de Óbidos (PR7 CLD)",
-                text: "A 12.8 km circular trail around the Óbidos Lagoon, offering picturesque views of the lagoon and surrounding landscapes. Ideal for both hiking and cycling.",
+                title: "Lisbon Zoo (1h30)",
+                text: "A classic family favourite. See over 2,000 animals, enjoy the cable car, and explore conservation exhibits.",
                 image: "/Bed.png",
-                address: "Óbidos, Portugal",
-            },
-            {
-                title: "Rota dos Moinhos (PR3 BTL)",
-                text: "A 6.7 km trail in Batalha that takes you through historical water mills and lush greenery. It's a moderate hike that combines cultural heritage with natural beauty.",
-                image: "/Bed.png",
-                address: "Batalha, Portugal",
-            },
-            {
-                title: "Rota do Carvão (PR6 PMS)",
-                text: "An 11.3 km circular trail in Porto de Mós that traverses former coal mining areas, offering insights into the region's industrial past amidst scenic surroundings.",
-                image: "/Bed.png",
-                address: "Porto de Mós, Portugal",
-            },
-            {
-                title: "Passadiços de Paredes da Vitória a Água de Madeiros",
-                text: "An 8.7 km boardwalk trail connecting Paredes da Vitória and Água de Madeiros beaches. This easy route provides stunning coastal views and is suitable for all ages.",
-                image: "/Bed.png",
-                address: "Paredes da Vitória, Leiria, Portugal",
-            },
-            {
-                title: "Rota do Peregrino (PR4 LRA)",
-                text: "A 14.8 km trail starting in Leiria and ending in Fátima, following paths taken by pilgrims. It's a mix of paved and unpaved roads, offering a spiritual journey through diverse landscapes.",
-                image: "/Bed.png",
-                address: "Leiria to Fátima, Portugal",
-            },
-            {
-                title: "Ecopista de Porto de Mós",
-                text: "An 11 km eco-trail built on a former railway line in Porto de Mós. The path is mostly flat, making it perfect for leisurely walks, runs, and bike rides amidst nature.",
-                image: "/Bed.png",
-                address: "Porto de Mós, Portugal",
+                address: (
+                    <>
+                        <p>GPS: </p>
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Jardim+Zool%C3%B3gico+de+Lisboa,+Pra%C3%A7a+Marechal+Humberto+Delgado,+Lisbon/@39.220312,-9.7317473,226431m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd193323a502a477:0x44abde7aadf0d25d!2m2!1d-9.1692039!2d38.7430914?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
+                            38.77739961031819, -9.182430934272247
+                        </a>
+                    </>
+                ),
+                website: "https://www.zoo.pt",
             },
         ],
     },
+    /* Wellness & Spa */
     {
-        path: "cities",
-        title: "Cities",
+        path: "Wellness-Spa",
+        title: "Top Wellness & Spa Retreats",
         description:
-            "Within a 40km radius, explore charming cities and towns such as Alcobaça, Leiria, Batalha, and Nazaré. Each offers its own story, with historic sites, vibrant local markets, and unique architecture worth discovering.",
-        img: "/around/cities.jpg",
+            "For guests seeking relaxation and rejuvenation, the Centro Oeste region offers a variety of spas, thalassotherapy centers, and thermal baths—all within about 90 minutes from Zira Houses.",
+        img: "/around/beach.png",
         content: [
             {
-                title: "Leiria",
-                text: "A dynamic city blending medieval charm with modern life. Known for its hilltop castle, the city also boasts museums, a historic center, lively cafes, and the scenic Lis River promenade.",
+                title: "Thalasso Spa Nazaré – Nazaré (20 min)",
+                text: "Located right by the Atlantic Ocean, the Nazaré Thalasso & Spa offers seawater treatments, hydrotherapy pools, massages, and beauty therapies. It’s a perfect place to unwind with stunning ocean views and the healing benefits of seawater. Ideal for those looking to combine beach time with wellness.",
                 image: "/Bed.png",
-                address: "Leiria, Portugal",
+                address: (
+                    <>
+                        <p>GPS: </p>
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Thalasso+Nazar%C3%A9,+Avenida+Manuel+Rem%C3%ADgio,+Nazar%C3%A9/@39.6439977,-9.0703965,14066m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a9a3ff2c5545:0x1a56285f696726ab!2m2!1d-9.0738657!2d39.5908641?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
+                            39.59500641345026, -9.075374684474658
+                        </a>
+                    </>
+                ),
+                website: "https://thalassonazare.com/en/",
             },
             {
-                title: "Marinha Grande",
-                text: "Portugal's glassmaking capital, known for its rich industrial history and the Glass Museum. Surrounded by the vast Leiria Pine Forest, it’s a cultural and nature-filled destination.",
+                title: "Termas de Monte Real – Monte Real (30 min)",
+                text: "One of Portugal's most renowned thermal spas, Termas de Monte Real offers a variety of thermal treatments using natural mineral waters with therapeutic properties. Facilities include thermal pools, hydrotherapy circuits, massage therapies, and beauty treatments in a serene environment. Perfect for a relaxing day or wellness getaway.",
                 image: "/Bed.png",
-                address: "Marinha Grande, Portugal",
+                address: (
+                    <>
+                        <p>GPS: </p>
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Monte+Real+Termas,+R.+de+Leiria,+2425-039+Monte+Real/@39.8517464,-8.8772396,3506m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd227364213fb66f:0x987cc30dfcbdb2bd!2m2!1d-8.8701233!2d39.8543765?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
+                            39.8550904051736, -8.87045900399779
+                        </a>
+                    </>
+                ),
+                website: "https://www.termasdemontereal.pt/spa",
             },
             {
-                title: "Alcobaça",
-                text: "Famous for its UNESCO World Heritage Monastery, Alcobaça is a historic city offering beautiful gardens, traditional pastry shops, and a peaceful cultural atmosphere.",
+                title: "Termas da Piedade – Alcobaça (30 min)",
+                text: "A historic thermal spa offering healing waters known for digestive and musculoskeletal benefits. Treatments include thermal baths, Vichy showers, and hydrocolonotherapy. Recently renovated, it combines tradition with modern wellness services.",
                 image: "/Bed.png",
-                address: "Alcobaça, Portugal",
+                address: (
+                    <>
+                        <p>GPS: </p>
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Termas+da+Piedade,+Vestiaria/@39.5616122,-9.0052493,7041m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a6181f3ddec7:0xa0186c006b54044f!2m2!1d-9.0021079!2d39.5693238?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
+                            39.57090849742248, -9.001901919957294
+                        </a>
+                    </>
+                ),
+                website:
+                    "https://termasdeportugal.pt/rede-termas/termas-da-piedade",
             },
             {
-                title: "Batalha",
-                text: "Home to the monumental Batalha Monastery, a masterpiece of Gothic architecture. The city is small but culturally significant, with quaint streets and historical importance.",
+                title: "Spa Villa Batalha – Batalha (30 min)",
+                text: "Enjoy hydrotherapy circuits with indoor heated pools, jacuzzis, sauna, Turkish bath, and massages, all with views of the famous Batalha Monastery. A perfect blend of wellness and cultural heritage.",
                 image: "/Bed.png",
-                address: "Batalha, Portugal",
-            },
-            {
-                title: "Caldas da Rainha",
-                text: "A lively spa city founded by Queen Leonor, known for its thermal waters, daily fruit and vegetable market, and strong tradition in ceramics and arts.",
-                image: "/Bed.png",
-                address: "Caldas da Rainha, Portugal",
-            },
-            {
-                title: "Fátima",
-                text: "One of the world’s most important Catholic pilgrimage sites. Fátima offers spiritual depth, cultural museums, and serene parks surrounding the Sanctuary.",
-                image: "/Bed.png",
-                address: "Fátima, Portugal",
-            },
-            {
-                title: "Nazaré",
-                text: "A coastal city world-famous for its record-breaking waves and strong fishing traditions. It offers stunning ocean views, seafood cuisine, and vibrant local culture.",
-                image: "/Bed.png",
-                address: "Nazaré, Portugal",
-            },
-            {
-                title: "Ourém",
-                text: "A historic city featuring a medieval hilltop castle and old town, overlooking the modern part below. It’s closely linked to Fátima and offers a mix of history and tranquility.",
-                image: "/Bed.png",
-                address: "Ourém, Portugal",
-            },
-            {
-                title: "Torres Novas",
-                text: "A charming inland city known for its castle ruins, traditional architecture, and riverside gardens. Ideal for exploring local history and enjoying relaxed city life.",
-                image: "/Bed.png",
-                address: "Torres Novas, Portugal",
-            },
-            {
-                title: "Rio Maior",
-                text: "Known for its traditional salt pans and the nearby Serra de Aire e Candeeiros Natural Park. A great base for exploring nature and local gastronomy.",
-                image: "/Bed.png",
-                address: "Rio Maior, Portugal",
-            },
-            {
-                title: "Peniche",
-                text: "A vibrant coastal city and surfing hotspot, also home to historic fortresses and the Berlengas Nature Reserve. Offers boat trips, fresh seafood, and cultural landmarks.",
-                image: "/Bed.png",
-                address: "Peniche, Portugal",
-            },
-            {
-                title: "Pombal",
-                text: "Strategically located between Lisbon and Porto, this city features a medieval castle and is rich in historical ties to the Marquis of Pombal, with a calm and cultural vibe.",
-                image: "/Bed.png",
-                address: "Pombal, Portugal",
-            },
-            {
-                title: "Bombarral",
-                text: "A wine-producing city surrounded by vineyards and close to the famous Buddha Eden Garden. Combines rural charm with cultural attractions and local flavors.",
-                image: "/Bed.png",
-                address: "Bombarral, Portugal",
+                address: (
+                    <>
+                        <p>GPS: </p>
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Villa+Batalha+Hotel,+Rua+de+Dom+Duarte+I+248,+2440-505+Batalha/@39.6312838,-9.0276961,28137m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd22754fc17c40d3:0x2b93e1b9d98fe61b!2m2!1d-8.824409!2d39.6636218?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
+                            39.66815984041338, -8.824448986345095
+                        </a>
+                    </>
+                ),
+                website: "https://www.hotelvillabatalha.com/spa/",
             },
         ],
     },
@@ -481,11 +602,32 @@ THEMEPLATE
             {
                 title: "",
                 text: "",
+                extratext: (
+                    <>
+                        <p className="font-bold">- </p>
+                        <p className="font-bold">- </p>
+                    </>
+                ),
                 image: "/Bed.png",
                 address: "",
-                website: "",
-                extra:"Second Website or extra information",
-                distance:"",
+
+                in case of beach array:
+                ---------------------------
+                extralink: (
+                    <>
+                        Check live beach conditions:{" "}
+                        <a
+                            href="link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Beachcam
+                        </a>{" "}
+                    </>
+                ),
+                -------------------------
             },
         ],
     },
