@@ -7,13 +7,13 @@ const around = [
         title: "Art & Culture",
         description:
             "Immerse yourself in the region’s rich cultural heritage. From traditional festivals and local crafts to historical landmarks and museums, discover the unique blend of history and creativity that defines the heart of central Portugal.",
-        img: "/around/art-culture.jpg",
+        img: "/around/art-culture/art-culture.jpg",
 
         content: [
             {
                 title: "Alcobaça Monastery (UNESCO World Heritage)",
                 text: "The Alcobaça Monastery is a magnificent example of Gothic architecture in Portugal, founded in 1153 and a UNESCO World Heritage site. The monastery is famous for its stunning architecture, vast cloisters, and the tombs of King Pedro I and his lover Inês de Castro. The monastery houses important historical artifacts, including a remarkable collection of medieval manuscripts and religious relics. Visitors can explore the monastery’s beautiful surroundings, including the peaceful gardens, while learning about its historical significance as a center of religious and cultural life.",
-                image: "/Bed.png",
+                image: "/around/art-culture/1.jpg",
                 address: " Largo do Mosteiro, 2460-018 Alcobaça",
                 website: "https://www.mosteiroalcobaca.gov.pt",
                 distance: "Approx. 15 min by car",
@@ -21,7 +21,7 @@ const around = [
             {
                 title: "Batalha Monastery (UNESCO World Heritage)",
                 text: "A symbol of Portuguese resilience and artistic grandeur, the Batalha Monastery is one of the finest examples of late Gothic architecture in Europe. Built to celebrate the 1385 victory at the Battle of Aljubarrota, this UNESCO World Heritage site showcases intricate stone carvings, soaring arches, and the magnificent Founder's Chapel — the final resting place of King João I and Queen Philippa of Lancaster. Don’t miss the awe-inspiring Unfinished Chapels, an open-air glimpse into history frozen in time.",
-                image: "/Bed.png",
+                image: "/around/art-culture/2.jpg",
                 address:
                     "Mosteiro de Santa Maria da Vitória, Largo Infante Dom Henrique, 2440-109 Batalha",
                 website: "whc.unesco.org/en/list/264",
@@ -31,7 +31,7 @@ const around = [
             {
                 title: "MCCB - Batalha Municipality Community Museum",
                 text: "Located near the Batalha Monastery, a UNESCO World Heritage site, the MCCB (Municipal Community Museum) offers a comprehensive look at the history and culture of the Batalha region. The museum features exhibits that explore local traditions, agricultural practices, and the evolution of the community from medieval times to the present. The museum’s location, close to the historic monastery, allows it to incorporate themes related to religion, history, and the famous Battle of Aljubarrota. It also regularly hosts temporary exhibitions and cultural events.",
-                image: "/Bed.png",
+                image: "/around/art-culture/3.jpg",
                 address: "Largo Goa, Damão e Diu, 2440-901 Batalha",
                 website: "http://www.museubatalha.com",
 
@@ -40,7 +40,7 @@ const around = [
             {
                 title: "Leiria Castle",
                 text: "Leiria Castle, perched on a hilltop, offers stunning panoramic views of the city and surrounding landscapes. Originally built in the 12th century, this historic fortress was expanded over the centuries, showcasing a mix of Romanesque, Gothic, and Manueline architectural styles. It has witnessed significant events in Portuguese history, and today, it hosts various cultural activities, including historical reenactments, exhibitions, and concerts. The castle's central location makes it a must-visit landmark in Leiria, providing visitors with a glimpse into the past while enjoying breathtaking views.",
-                image: "/Bed.png",
+                image: "/around/art-culture/4.jpg",
                 address: "Rua do Castelo, 2400-235 Leiria",
                 website: "https://www.visiteleiria.pt",
 
@@ -49,7 +49,7 @@ const around = [
             {
                 title: "Museum of the Moving Image (MIMO), Leiria",
                 text: "Located in the heart of Leiria, MIMO offers a fascinating journey through the history of cinema, photography, and visual storytelling. The museum features a rich collection of equipment, artifacts, and documents that explore the evolution of moving images. In addition to its permanent exhibition, MIMO also promotes educational activities, thematic events, and research in the field of audiovisual media.",
-                image: "/Bed.png",
+                image: "/around/art-culture/5.jpg",
                 address: "Largo de São Pedro, Leiria",
                 website:
                     "https://www.cm-leiria.pt/areas-de-atividade/cultura/museus/m-i-mo-museu-da-imagem-em-movimento",
@@ -59,7 +59,7 @@ const around = [
             {
                 title: "Paper Mill Museum (Museu da Fábrica do Papel), Leiria",
                 text: "Set in a beautifully restored industrial building, this museum is dedicated to preserving the heritage of traditional crafts once central to daily life — including cereal milling, olive oil production, and paper making. The project was developed with the collaboration of renowned architect Álvaro Siza Vieira and a multidisciplinary team, bringing history to life through interactive exhibits and immersive storytelling.",
-                image: "/Bed.png",
+                image: "/around/art-culture/6.jpg",
                 address: "Rua Fábrica do Papel, nº 13, 2410-103 Leiria",
                 website: "https://www.visiteleiria.pt",
 
@@ -68,7 +68,7 @@ const around = [
             {
                 title: "Santana's Market, Leiria",
                 text: "Built in the early 20th century by architect Ernesto Korrodi, the Santana’s Market was originally designed to house the Municipal Market. Since 2002, it has been transformed into a vibrant cultural center that hosts a variety of events, exhibitions, and activities throughout the year, enriching the local cultural scene.",
-                image: "/Bed.png",
+                image: "/around/art-culture/7.jpg",
                 address: "Largo de Santana, Leiria",
                 website: "www.cm-leiria.pt",
 
@@ -77,7 +77,7 @@ const around = [
             {
                 title: "Marinha Grande Glass Museum",
                 text: "The Marinha Grande Glass Museum offers a fascinating journey through the history of glassmaking in the region, which has been renowned for its glass production for centuries. The museum showcases a wide array of glass objects, from delicate decorative pieces to functional items, reflecting the craftsmanship and skill of local artisans. Visitors can learn about traditional glassmaking techniques, watch live demonstrations, and explore exhibits that highlight the role of glass in both local and international contexts. The museum is an essential stop for anyone interested in the art and history of glassmaking.",
-                image: "/Bed.png",
+                image: "/around/art-culture/8.jpg",
                 address: "Rua 1º de Maio, 2430-184 Marinha Grande",
                 website: "http://www.museudovidro.pt",
 
@@ -86,7 +86,7 @@ const around = [
             {
                 title: "Santuário de Nossa Senhora da Nazaré",
                 text: "The Sanctuary of Our Lady of Nazaré is one of Portugal’s most famous pilgrimage sites, deeply embedded in both the religious and cultural life of the region. The sanctuary is home to the venerated image of Our Lady of Nazaré, which has been the center of devotion for centuries. The church itself is an architectural masterpiece, with elements dating back to the 14th century. The sanctuary is surrounded by a vibrant cultural atmosphere, with various religious celebrations and cultural events throughout the year, including the famous Nossa Senhora da Nazaré pilgrimage.",
-                image: "/Bed.png",
+                image: "/around/art-culture/9.jpg",
                 address: "Praça Sousa Oliveira, 2450-065 Nazaré",
                 website: "http://www.santuarionazare.pt",
 
@@ -95,7 +95,7 @@ const around = [
             {
                 title: "Óbidos Castle",
                 text: "Óbidos Castle is a stunning medieval fortress that offers visitors a unique glimpse into Portugal’s rich history. Originally built in the 12th century, the castle has been meticulously preserved and showcases traditional architectural elements such as fortified walls and a central keep. Today, the castle is open to the public, providing a captivating journey through Portugal's medieval past. Wander through its historic rooms, climb its towers for panoramic views, and explore the charming town of Óbidos, known for its cobbled streets and picturesque whitewashed houses.",
-                image: "/Bed.png",
+                image: "/around/art-culture/10.jpg",
                 address: "Rua do Castelo, 2510-999 Óbidos",
                 website: "http://www.obidos.pt/en/castle",
 
@@ -104,7 +104,7 @@ const around = [
             {
                 title: "Parque D. Carlos I, Caldas da Rainha",
                 text: "The Parque D. Carlos I is a beautiful and tranquil park located in the heart of Caldas da Rainha. Created in the 19th century, it features lush green spaces, serene lakes, and charming pathways, making it an ideal spot for a relaxing walk or a peaceful picnic. The park also houses the Caldas da Rainha Thermal Hospital, famous for its therapeutic hot springs, adding to the town’s long-standing reputation for wellness. Visitors can enjoy the park’s natural beauty, explore its scenic surroundings, and take in the peaceful atmosphere that the park provides.",
-                image: "/Bed.png",
+                image: "/around/art-culture/11.jpg",
                 address: "Parque D. Carlos I, Caldas da Rainha",
                 website: "",
 
@@ -113,7 +113,7 @@ const around = [
             {
                 title: "Museu José Malhoa, Caldas da Rainha",
                 text: "The Museu José Malhoa is dedicated to the life and works of José Malhoa, one of Portugal’s most prominent painters of the late 19th and early 20th centuries. Located in Caldas da Rainha, the museum showcases a rich collection of his works, along with temporary exhibitions of Portuguese art. The museum offers a unique opportunity to explore the evolution of Portuguese art and to appreciate Malhoa's mastery in capturing the essence of rural life and the Portuguese landscape. A visit to this museum is a must for art lovers and anyone interested in Portuguese cultural heritage.",
-                image: "/Bed.png",
+                image: "/around/art-culture/12.jpg",
                 address: "Museu José Malhoa, Caldas da Rainha",
                 website:
                     "https://www.museusemonumentos.pt/pt/museus-e-monumentos/museu-jose-malhoa?fbclid=IwY2xjawKOKh1leHRuA2FlbQIxMABicmlkETFjNGNXSWg3YXFEa09ZNHYwAR4adHqz3Lqz5mya6uk1LnoUXOyDAk3nXis46KG417AAr38a5XStXfRL4wwRsQ_aem_yMbVee_ySXrmBo7kZxIMgQ",
@@ -123,7 +123,7 @@ const around = [
             {
                 title: "Fátima",
                 text: "Fátima is one of the world’s most important pilgrimage sites, known for the Sanctuary of Our Lady of Fátima, where the Virgin Mary appeared in 1917. The Sanctuary includes the Basilica of Our Lady of the Rosary, the Chapel of the Apparitions, and the Monument to the Shepherds. Millions visit annually, especially on the 13th of May and October. Fátima offers a peaceful atmosphere for prayer, reflection, and spiritual growth, attracting visitors of all faiths.",
-                image: "/Bed.png",
+                image: "/around/art-culture/13.jpg",
                 address: "Fátima, Portugal",
                 website: "",
 
@@ -132,7 +132,7 @@ const around = [
             {
                 title: "Convento de Cristo, Tomar (UNESCO World Heritage)",
                 text: "This medieval convent is one of the most impressive monuments in Portugal, with a strong connection to the Knights Templar. The architecture and historical details, including the famous Charola and Tomar Castle, make this site a significant point of interest for tourists seeking history, art, and culture.",
-                image: "/Bed.png",
+                image: "/around/art-culture/14.jpg",
                 address: "Convento de Cristo, 2300-000 Tomar, Portugal ",
                 website: "http://www.conventocristo.gov.pt/pt/index.php",
 
@@ -146,7 +146,7 @@ const around = [
         title: "Beach & Surf",
         description:
             "Portugal boasts some of the world’s most stunning beaches, many just a short drive from Zira Houses. Below, you’ll find a selection of beautiful beaches ranked by driving distance from our location. Whether you’re seeking family-friendly spots, prime surf breaks, or peaceful natural retreats, the Centro-Oeste region offers it all—charming fishing villages, fresh seafood, and breathtaking ocean views await.",
-        img: "/around/beach.png",
+        img: "/around/beach/beach.png",
         content: [
             {
                 title: "Praia da Paredes da Vitória (8min) ",
@@ -157,7 +157,7 @@ const around = [
                         <p className="font-bold">- Surf Spot with Classes</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/1.jpg",
                 address: "Rua da Praia, 2450-138 Paredes da Vitória",
                 extralink: (
                     <>
@@ -183,7 +183,7 @@ const around = [
                         <p className="font-bold">- Nature Spot</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/2.jpg",
                 address: "Praia da Polvoeira, Pataias, 2445 Alcobaça, Portugal",
             },
             {
@@ -195,7 +195,7 @@ const around = [
                         <p className="font-bold">- Nature Spot</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/3.jpg",
                 address: "Estrada Vale Furado, 2445-017 Alcobaça",
             },
             {
@@ -207,7 +207,7 @@ const around = [
                         <p className="font-bold">- Surf Spot with Classes</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/4.jpg",
                 address: "Praia de São Pedro de Moel, Marinha Grande",
                 extralink: (
                     <>
@@ -233,7 +233,7 @@ const around = [
                         <p className="font-bold">- Accessible</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/5.jpg",
                 address: "Avenida da República, 2450-101 Nazaré",
                 extralink: (
                     <>
@@ -263,7 +263,7 @@ const around = [
                         </p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/6.jpg",
                 address: "Praia do Norte, Nazaré, 2450-076, Portugal",
                 extralink: (
                     <>
@@ -289,7 +289,7 @@ const around = [
                         <p className="font-bold">- Quiet Beach</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/7.jpg",
                 address: "Praia da Vieira, Marinha Grande",
 
                 extralink: (
@@ -316,7 +316,7 @@ const around = [
                         <p className="font-bold">- Accessible</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/8.jpg",
                 address: "Marginal de Alcobaça, 2460-096 São Martinho do Porto",
                 extralink: (
                     <>
@@ -342,7 +342,7 @@ const around = [
                         <p className="font-bold">- Quiet Beach</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/9.jpg",
                 address: "Praia do Pedrógão, Leiria",
                 extralink: (
                     <>
@@ -368,7 +368,7 @@ const around = [
                         <p className="font-bold">- Nature Spot</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/10.jpg",
                 address:
                     "A beautiful beach with both ocean and lagoon views, ideal for swimming, kayaking, and relaxing in a scenic environment. The Óbidos Lagoon offers shallow and warm waters, ideal for kids to play safely. Plenty of space, shaded picnic areas, and family-friendly restaurants nearby.",
                 extralink: (
@@ -394,7 +394,7 @@ const around = [
                         <p className="font-bold">- Surf Spot</p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/11.jpg",
                 address: "Praia do Osso da Baleia, Ferrel, Peniche",
                 extralink: (
                     <>
@@ -420,7 +420,7 @@ const around = [
                         <p className="font-bold">- Surf Spot with Classes </p>
                     </>
                 ),
-                image: "/Bed.png",
+                image: "/around/beach/12.jpg",
                 address: "Largo da Praça do Peixe, Ferrel",
                 extralink: (
                     <>
@@ -445,12 +445,12 @@ const around = [
         title: "Leisure Parks",
         description:
             "Discover unforgettable family experiences near Zira Houses. From dinosaurs and serene gardens to fun-filled leisure parks, explore our top recommendations—all within 90 minutes’ drive and perfect for all ages.",
-        img: "/around/beach.png",
+        img: "/around/leisure-park/leisure-park.jpg",
         content: [
             {
                 title: "Parque dos Monges – Alcobaça (15 min)",
                 text: "Parque dos Monges is a unique theme park inspired by the monastic life of the Cistercian Order. Located in Alcobaça, just 15 minutes from Zira Houses, it offers families a blend of nature, history, and outdoor adventure. The park features a medieval village, a pedagogical farm with native animals, climbing and canoeing activities, and a freshwater aquarium dedicated to the Alcoa River. It's ideal for families looking for an educational and fun experience surrounded by nature.",
-                image: "/Bed.png",
+                image: "/around/leisure-park/1.jpg",
                 address: (
                     <>
                         <p>GPS: </p>
@@ -464,7 +464,7 @@ const around = [
             {
                 title: "Pia do Urso Sensory EcoPark - Batalha (20 min)",
                 text: "Charming forest walk with sensory activities for children, including sound tubes and tactile games. Free and stroller-friendly.",
-                image: "/Bed.png",
+                image: "/around/leisure-park/2.jpg",
                 address: (
                     <>
                         <p>GPS: </p>
@@ -478,7 +478,7 @@ const around = [
             {
                 title: "Bacalhôa Buddha Eden – Garden of Peace (40 min)",
                 text: "Located in Bombarral, Bacalhôa Buddha Eden is Europe's largest oriental garden, spanning over 35 hectares. Created as a tribute to the destroyed Buddhas of Bamyan, this tranquil sanctuary features a harmonious blend of nature, art, and spirituality. Visitors can explore golden Buddha statues, pagodas, terracotta warriors, African sculptures, and serene lakes adorned with koi fish and stone dragons. The garden also showcases contemporary artworks from the Berardo Collection, offering a unique cultural experience.",
-                image: "/Bed.png",
+                image: "/around/leisure-park/3.jpg",
                 address: (
                     <>
                         <p>GPS: </p>
@@ -492,7 +492,7 @@ const around = [
             {
                 title: "Dino Parque Lourinhã (1h)",
                 text: "Portugal's largest open-air dinosaur museum with over 180 life-size models. Kids can explore dig zones, learn about prehistoric eras, and enjoy interactive exhibits.",
-                image: "/Bed.png",
+                image: "/around/leisure-park/4.jpg",
                 address: (
                     <>
                         <p>GPS: </p>
@@ -506,7 +506,7 @@ const around = [
             {
                 title: "Lisbon Zoo (1h30)",
                 text: "A classic family favourite. See over 2,000 animals, enjoy the cable car, and explore conservation exhibits.",
-                image: "/Bed.png",
+                image: "/around/leisure-park/5.jpg",
                 address: (
                     <>
                         <p>GPS: </p>
@@ -525,12 +525,12 @@ const around = [
         title: "Top Wellness & Spa Retreats",
         description:
             "For guests seeking relaxation and rejuvenation, the Centro Oeste region offers a variety of spas, thalassotherapy centers, and thermal baths—all within about 90 minutes from Zira Houses.",
-        img: "/around/beach.png",
+        img: "/around/wellness-spa/wellness-spa.jpg",
         content: [
             {
                 title: "Thalasso Spa Nazaré – Nazaré (20 min)",
                 text: "Located right by the Atlantic Ocean, the Nazaré Thalasso & Spa offers seawater treatments, hydrotherapy pools, massages, and beauty therapies. It’s a perfect place to unwind with stunning ocean views and the healing benefits of seawater. Ideal for those looking to combine beach time with wellness.",
-                image: "/Bed.png",
+                image: "/around/wellness-spa/1.jpg",
                 address: (
                     <>
                         <p>GPS: </p>
@@ -544,7 +544,7 @@ const around = [
             {
                 title: "Termas de Monte Real – Monte Real (30 min)",
                 text: "One of Portugal's most renowned thermal spas, Termas de Monte Real offers a variety of thermal treatments using natural mineral waters with therapeutic properties. Facilities include thermal pools, hydrotherapy circuits, massage therapies, and beauty treatments in a serene environment. Perfect for a relaxing day or wellness getaway.",
-                image: "/Bed.png",
+                image: "/around/wellness-spa/2.jpg",
                 address: (
                     <>
                         <p>GPS: </p>
@@ -558,7 +558,7 @@ const around = [
             {
                 title: "Termas da Piedade – Alcobaça (30 min)",
                 text: "A historic thermal spa offering healing waters known for digestive and musculoskeletal benefits. Treatments include thermal baths, Vichy showers, and hydrocolonotherapy. Recently renovated, it combines tradition with modern wellness services.",
-                image: "/Bed.png",
+                image: "/around/wellness-spa/3.jpg",
                 address: (
                     <>
                         <p>GPS: </p>
@@ -573,7 +573,7 @@ const around = [
             {
                 title: "Spa Villa Batalha – Batalha (30 min)",
                 text: "Enjoy hydrotherapy circuits with indoor heated pools, jacuzzis, sauna, Turkish bath, and massages, all with views of the famous Batalha Monastery. A perfect blend of wellness and cultural heritage.",
-                image: "/Bed.png",
+                image: "/around/wellness-spa/4.jpg",
                 address: (
                     <>
                         <p>GPS: </p>
