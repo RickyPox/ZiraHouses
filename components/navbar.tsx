@@ -27,7 +27,7 @@ export default function Navbar() {
                     <Link href="/">
                         <img
                             className="w-[300px]"
-                            src={isOpen ? "/LogoBlack.png" : "/Logo.png"}
+                            src={isOpen ? "/LogoBlack.png" : "/LogoWhite.png"}
                         />
                     </Link>
                 </div>

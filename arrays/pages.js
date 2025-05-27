@@ -14,7 +14,7 @@ const pages = [
         href: "/around-us",
     },
     {
-        title: "Contacts",
+        title: "Contacts & Locations",
         description:
             "I’m Mariana, a proud Superhost on Airbnb with over 10 years of experience hosting guests at Zira Houses, a family-friendly accommodation on Portugal’s Silver Coast. My mission is to provide families with a relaxing seaside getaway in a peaceful, private setting, ensuring a memorable and comfortable stay.",
         img: "/Garden.png",

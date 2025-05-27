@@ -1,5 +1,3 @@
-import { distance } from "framer-motion";
-
 const around = [
     /* ART & CULTURE */
     {
@@ -142,10 +140,10 @@ const around = [
     },
     /* BEACH & SURF */
     {
-        path: "beach-surf",
-        title: "Beach & Surf",
+        path: "beach-surf-waterfun",
+        title: "Beach, Surf & Water Fun",
         description:
-            "Portugal boasts some of the world’s most stunning beaches, many just a short drive from Zira Houses. Below, you’ll find a selection of beautiful beaches ranked by driving distance from our location. Whether you’re seeking family-friendly spots, prime surf breaks, or peaceful natural retreats, the Centro-Oeste region offers it all—charming fishing villages, fresh seafood, and breathtaking ocean views await.",
+            "Looking for sun, sea, and fun during your stay on Portugal’s Silver Coast? Discover the best beaches, surf locations, and water parks within easy reach of Zira Houses. Whether you're in search of peaceful family-friendly beaches, thrilling surf breaks, or splash-filled adventures at local water parks, this region offers the perfect mix of relaxation and excitement. All our recommendations are less than 90 minutes away - ideal for unforgettable summer days in the sun.",
         img: "/around/beach/beach.png",
         content: [
             {
@@ -437,23 +435,107 @@ const around = [
                     </>
                 ),
             },
+            {
+                title: "Norpark – Nazaré Water Park (20min)",
+                text: "Located in Nazaré, Norpark is a family-friendly water park offering a variety of attractions, including slides, a semi-Olympic pool, a giant jacuzzi, and a children's pool. The park provides free shuttle service from Nazaré beach and features amenities such as a bar and picnic areas. It's an ideal spot for a fun-filled day during the summer months.",
+
+                image: "/around/beach/13.jpg",
+                address: (
+                    <>
+                        <span>Estrada Praia do Norte, 2450-065 Nazaré</span>
+                        <br></br>
+                        <br></br>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Norpark+-+Aquatic+Amusement+Nazar%C3%A9,+Praia+do+Norte,+2450-065+Nazar%C3%A9/@39.613039,-9.0809464,440m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a9c3a917f529:0x63bafea1726a9c40!2m2!1d-9.0801809!2d39.6130378?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.613105740042144, -9.080195987476046
+                        </a>
+                    </>
+                ),
+                extralink: (
+                    <>
+                        Check the website:{" "}
+                        <a
+                            href="https://norpark.pt/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Website
+                        </a>{" "}
+                    </>
+                ),
+            },
+            {
+                title: "Orbitur São Pedro de Moel – Camping & Water Fun (15min)",
+                text: "Situated in a tranquil pine forest near the beach, Orbitur São Pedro de Moel offers a camping experience combined with water fun. The site features seasonal swimming pools with slides, a children's pool, and various recreational activities. It's a great choice for families looking to enjoy nature and water activities in one place.",
+
+                image: "/around/beach/14.jpg",
+                address: (
+                    <>
+                        <span>
+                            Rua Volta do Sete, 2430-532 São Pedro de Moel
+                        </span>
+                        <br></br>
+                        <br></br>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Orbitur+S+Pedro+De+Moel,+Rua+Volta+Do+Sete,+Marinha+Grande/@39.64841,-9.0733244,14065m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd2210d6c3aef49b:0xe93d8a113ef04204!2m2!1d-9.0260035!2d39.7586099?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.758187635181095, -9.02597310855169
+                        </a>
+                    </>
+                ),
+                extralink: (
+                    <>
+                        Check the website:{" "}
+                        <a
+                            href="https://www.orbitur.pt/pt/destinos/regiao-centro/orbitur-s-pedro-de-moel"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Website
+                        </a>{" "}
+                    </>
+                ),
+            },
+            {
+                title: "Berlengas Islands – Boat Trip from Peniche (50min by car + 30min by boat)",
+                text: "A protected natural reserve off the coast of Peniche, the Berlengas Islands offer crystal-clear waters, dramatic cliffs, sea caves, and rich marine life. Ideal for a day trip, visitors can enjoy boat tours, snorkeling, and short hikes with breathtaking views.",
+
+                image: "/around/beach/15.jpg",
+                extralink: (
+                    <>
+                        Tour Tickets and Schedules | Viamar ferry official site:{" "}
+                        <a
+                            href="https://viamar-berlenga.com/en/schedules-and-prices/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "3px" }}
+                        >
+                            Tickets and Shedules
+                        </a>{" "}
+                    </>
+                ),
+            },
         ],
     },
     /* LEISURE PARKS */
     {
-        path: "leisure-park",
-        title: "Leisure Parks",
+        path: "nature-leisure-park",
+        title: "Nature & Leisure Parks",
         description:
             "Discover unforgettable family experiences near Zira Houses. From dinosaurs and serene gardens to fun-filled leisure parks, explore our top recommendations—all within 90 minutes’ drive and perfect for all ages.",
-        img: "/around/leisure-park/leisure-park.jpg",
+        img: "/around/nature-leisure-park/nature-leisure-park.jpg",
         content: [
             {
                 title: "Parque dos Monges – Alcobaça (15 min)",
                 text: "Parque dos Monges is a unique theme park inspired by the monastic life of the Cistercian Order. Located in Alcobaça, just 15 minutes from Zira Houses, it offers families a blend of nature, history, and outdoor adventure. The park features a medieval village, a pedagogical farm with native animals, climbing and canoeing activities, and a freshwater aquarium dedicated to the Alcoa River. It's ideal for families looking for an educational and fun experience surrounded by nature.",
-                image: "/around/leisure-park/1.jpg",
+                image: "/around/nature-leisure-park/1.jpg",
                 address: (
                     <>
-                        <p>GPS: </p>
+                        GPS:{" "}
                         <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Parque+dos+Monges,+R.+Q.ta+das+Freiras+N.%C2%BA+10,+2460-089+Alcoba%C3%A7a/@39.6209397,-9.0881979,28142m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a43afef302bb:0xdbd8b5c0e6e9b04e!2m2!1d-8.9550905!2d39.5409975?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                             39.541087, -8.956146
                         </a>
@@ -462,12 +544,12 @@ const around = [
                 website: "http://www.parquedosmonges.com",
             },
             {
-                title: "Pia do Urso Sensory EcoPark - Batalha (20 min)",
-                text: "Charming forest walk with sensory activities for children, including sound tubes and tactile games. Free and stroller-friendly.",
-                image: "/around/leisure-park/2.jpg",
+                title: "“Pia do Urso” Village & Sensory EcoPark – São Mamede (45 min)",
+                text: "Pia do Urso is a charming mountain village rich in history and natural beauty. Carefully restored using traditional materials like stone and wood, the village showcases the region’s rural architecture in a peaceful and scenic setting. What makes Pia do Urso truly special is the Sensory EcoPark — the first of its kind in Portugal designed especially for the visually impaired. This innovative trail invites visitors to experience nature through touch, smell, and sound, creating a unique and inclusive way to connect with the surrounding landscape. It’s a perfect destination for families, nature lovers, and anyone seeking a meaningful outdoor experience.",
+                image: "/around/nature-leisure-park/2.jpg",
                 address: (
                     <>
-                        <p>GPS: </p>
+                        GPS:{" "}
                         <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Sensory+Ecopark+of+Pia+do+Urso,+R.+da+Pia+do+Urso+19,+2495-031/@39.6209397,-9.0881979,28142m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd189c449706fdeb:0x6588de0b119f5a0c!2m2!1d-8.7164507!2d39.5979585?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                             39.59810657573996, -8.715942658676076
                         </a>
@@ -478,10 +560,10 @@ const around = [
             {
                 title: "Bacalhôa Buddha Eden – Garden of Peace (40 min)",
                 text: "Located in Bombarral, Bacalhôa Buddha Eden is Europe's largest oriental garden, spanning over 35 hectares. Created as a tribute to the destroyed Buddhas of Bamyan, this tranquil sanctuary features a harmonious blend of nature, art, and spirituality. Visitors can explore golden Buddha statues, pagodas, terracotta warriors, African sculptures, and serene lakes adorned with koi fish and stone dragons. The garden also showcases contemporary artworks from the Berardo Collection, offering a unique cultural experience.",
-                image: "/around/leisure-park/3.jpg",
+                image: "/around/nature-leisure-park/3.jpg",
                 address: (
                     <>
-                        <p>GPS: </p>
+                        GPS:{" "}
                         <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Buddha+Eden,+Quinta+dos+Loridos,+2540-420/@39.2625618,-9.1451849,14143m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18ca66b0da2fbd:0x8f0e8583009b5b49!2m2!1d-9.1384902!2d39.2755559?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                             39.27777823726978, -9.137803423651427
                         </a>
@@ -492,10 +574,10 @@ const around = [
             {
                 title: "Dino Parque Lourinhã (1h)",
                 text: "Portugal's largest open-air dinosaur museum with over 180 life-size models. Kids can explore dig zones, learn about prehistoric eras, and enjoy interactive exhibits.",
-                image: "/around/leisure-park/4.jpg",
+                image: "/around/nature-leisure-park/4.jpg",
                 address: (
                     <>
-                        <p>GPS: </p>
+                        GPS:{" "}
                         <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Lourinh%C3%A3+Dino+Park,+R.+Vale+dos+Dinossauros+25,+Abelheira,+2530-059+Lourinh%C3%A3/@39.4888477,-9.3138494,56390m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd1f361db837f149:0x5dbc79a75bd1e04c!2m2!1d-9.2934375!2d39.2783785?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                             39.286921857525954, -9.29256343502927
                         </a>
@@ -506,10 +588,10 @@ const around = [
             {
                 title: "Lisbon Zoo (1h30)",
                 text: "A classic family favourite. See over 2,000 animals, enjoy the cable car, and explore conservation exhibits.",
-                image: "/around/leisure-park/5.jpg",
+                image: "/around/nature-leisure-park/5.jpg",
                 address: (
                     <>
-                        <p>GPS: </p>
+                        GPS:{" "}
                         <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Jardim+Zool%C3%B3gico+de+Lisboa,+Pra%C3%A7a+Marechal+Humberto+Delgado,+Lisbon/@39.220312,-9.7317473,226431m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd193323a502a477:0x44abde7aadf0d25d!2m2!1d-9.1692039!2d38.7430914?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                             38.77739961031819, -9.182430934272247
                         </a>
@@ -517,11 +599,43 @@ const around = [
                 ),
                 website: "https://www.zoo.pt",
             },
+            {
+                title: "Lagoa de Pataias (7min)",
+                text: "Just a short drive from Zira Houses, Lagoa de Pataias is a peaceful natural lagoon surrounded by pine forest and walking trails. It’s the perfect spot for a relaxing walk, birdwatching, or simply enjoying the calm atmosphere by the water. A great place for families, nature lovers, or anyone looking to disconnect and unwind in nature.",
+                image: "/around/nature-leisure-park/6.jpg",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Lagoa+de+Pataias,+Alcoba%C3%A7a,+Pataias/@39.6854181,-9.0225934,7029m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd22088612f596f9:0x53ce8b401beba5d9!2m2!1d-9.0030556!2d39.6772679?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.67735975542643, -9.003063369711075
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Serras de Aire e Candeeiros Natural Park (40min)",
+                text: "A stunning protected natural park known for its dramatic limestone landscapes, hidden caves, and traditional rural villages. Adventure lovers will enjoy hiking its scenic trails or exploring famous caves like Mira de Aire — Portugal’s largest public cave. The park is also home to ancient stone walls, olive groves, and beautiful viewpoints over the central region of Portugal.",
+                image: "/around/nature-leisure-park/7.jpg",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Parque+Natural+das+Serras+de+Aire+e+Candeeiros/@39.5629742,-9.0623408,56330m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18984e5995d7b7:0xf9f556a3f8179800!2m2!1d-8.8142264!2d39.5028741?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.50781616494568, -8.808103348975207
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Leiria Pine Forest",
+                text: "A vast pine forest covering around 12,000 hectares, originally planted during the reign of King Afonso III and later expanded significantly under King Dinis — known as the “Farmer King.” Beyond acting as a natural barrier against encroaching sand dunes, the forest played a key role in history: its timber was essential for building the ships that made the Portuguese Maritime Discoveries possible.",
+                image: "/around/nature-leisure-park/8.jpg",
+                website: "http://www.turismodocentro.pt/",
+            },
         ],
     },
     /* Wellness & Spa */
     {
-        path: "Wellness-Spa",
+        path: "wellness-spa",
         title: "Top Wellness & Spa Retreats",
         description:
             "For guests seeking relaxation and rejuvenation, the Centro Oeste region offers a variety of spas, thalassotherapy centers, and thermal baths—all within about 90 minutes from Zira Houses.",
@@ -533,7 +647,7 @@ const around = [
                 image: "/around/wellness-spa/1.jpg",
                 address: (
                     <>
-                        <p>GPS: </p>
+                        GPS:
                         <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Thalasso+Nazar%C3%A9,+Avenida+Manuel+Rem%C3%ADgio,+Nazar%C3%A9/@39.6439977,-9.0703965,14066m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a9a3ff2c5545:0x1a56285f696726ab!2m2!1d-9.0738657!2d39.5908641?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                             39.59500641345026, -9.075374684474658
                         </a>
@@ -547,7 +661,7 @@ const around = [
                 image: "/around/wellness-spa/2.jpg",
                 address: (
                     <>
-                        <p>GPS: </p>
+                        GPS:
                         <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Monte+Real+Termas,+R.+de+Leiria,+2425-039+Monte+Real/@39.8517464,-8.8772396,3506m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd227364213fb66f:0x987cc30dfcbdb2bd!2m2!1d-8.8701233!2d39.8543765?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                             39.8550904051736, -8.87045900399779
                         </a>
@@ -561,7 +675,7 @@ const around = [
                 image: "/around/wellness-spa/3.jpg",
                 address: (
                     <>
-                        <p>GPS: </p>
+                        GPS:
                         <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Termas+da+Piedade,+Vestiaria/@39.5616122,-9.0052493,7041m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a6181f3ddec7:0xa0186c006b54044f!2m2!1d-9.0021079!2d39.5693238?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                             39.57090849742248, -9.001901919957294
                         </a>
@@ -576,13 +690,309 @@ const around = [
                 image: "/around/wellness-spa/4.jpg",
                 address: (
                     <>
-                        <p>GPS: </p>
+                        GPS:
                         <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Villa+Batalha+Hotel,+Rua+de+Dom+Duarte+I+248,+2440-505+Batalha/@39.6312838,-9.0276961,28137m/data=!3m2!1e3!4b1!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd22754fc17c40d3:0x2b93e1b9d98fe61b!2m2!1d-8.824409!2d39.6636218?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D">
                             39.66815984041338, -8.824448986345095
                         </a>
                     </>
                 ),
                 website: "https://www.hotelvillabatalha.com/spa/",
+            },
+        ],
+    },
+    /* Local Markets */
+    {
+        path: "local-markets",
+        title: "Local Markets",
+        description:
+            "Discover the charm of traditional Portuguese markets near Zira Houses. From fresh fruit and vegetables to local fish, meat, bread, clothes, and crafts, these lively markets are the perfect way to experience the region’s authentic flavors and culture. Ideal for a morning stroll and for stocking up on delicious local products during your stay on the Silver Coast.",
+        img: "/around/local-markets/market.jpg",
+        content: [
+            {
+                title: "Pataias Weekly Market (10 min) – most popular",
+                image: "/around/local-markets/1.jpg",
+                text: "A vibrant market featuring over 180 vendors offering fresh fruits, vegetables, meats, fish, clothing, household items, and ready-to-eat grilled foods like chicken and bifanas.",
+                extratext: (
+                    <>
+                        <p>
+                            <span className="font-bold">When: </span>
+                            Sundays, 6:00 AM – 1:30 PM
+                        </p>
+                    </>
+                ),
+                address: (
+                    <>
+                        <span>
+                            Rua Nossa Senhora da Vitória, near the Municipal
+                        </span>
+                        <br></br>
+                        <br></br>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Feira+de+Pataias,+Estrada+de+Pataias,+Pataias/@39.6745201,-9.0072535,213m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd2209003393073f:0x88ba7a0a3b8d5958!2m2!1d-9.0068033!2d39.6746713?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.67469556466631, -9.006794878971288
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Alcobaça Municipal Market (25 min)",
+                image: "/around/local-markets/2.jpg",
+                text: "A traditional indoor market offering fresh produce, meats, fish, cheeses, and local delicacies. ",
+                extratext: (
+                    <>
+                        <p>
+                            <span className="font-bold">When: </span>
+                            Monday: 6:00 AM – 4:30 PM; Tuesday to Friday: 7:30
+                            AM – 1:00 PM; Saturday: 6:00 AM – 2:00 PM
+                        </p>
+                    </>
+                ),
+                address: (
+                    <>
+                        <span>Rua Dr. Eduíno Borges Garcia, Alcobaça</span>
+                        <br></br>
+                        <br></br>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/R.+Dr.+Edu%C3%ADno+Borges+Garcia,+Alcoba%C3%A7a/@39.5538924,-8.9774099,1245m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a5d630e6c3d1:0xfe3d4ad590d19d21!2m2!1d-8.9768843!2d39.5509771?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.55220125148517, -8.97696452273392
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Alcobaça Weekly Fair (25 min)",
+                image: "/around/local-markets/3.jpg",
+                text: "An open-air market with a variety of goods, including clothing, accessories, and household items.",
+                extratext: (
+                    <>
+                        <p>
+                            <span className="font-bold">When: </span>
+                            Mondays, 6:00 AM – 1:00 PM
+                        </p>
+                    </>
+                ),
+                address: (
+                    <>
+                        <span>
+                            Avenida D. Pedro I and Avenida D. Inês de Castro,
+                            Alcobaça
+                        </span>
+                        <br></br>
+                        <br></br>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/39.5486198,-8.9735897/@39.5481493,-8.974694,453m/data=!3m1!1e3!4m8!4m7!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m0?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.54868365108332, -8.973578646122084
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Leiria Municipal Market (35 min)",
+                image: "/around/local-markets/4.jpg",
+                text: "A recently renovated market offering a wide range of fresh produce, meats, fish, cheeses, and baked goods. On Tuesdays and Thursdays, local producers sell directly to consumers.",
+                extratext: (
+                    <>
+                        <p>
+                            <span className="font-bold">When: </span>
+                            Tuesday to Friday: 7:00 AM – 7:00 PM; Saturday: 6:00
+                            AM – 1:00 PM
+                        </p>
+                    </>
+                ),
+                address: (
+                    <>
+                        <span>Avenida Cidade de Maringá, Leiria</span>
+                        <br></br>
+                        <br></br>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/Leiria+Municipal+Market,+Av.+Cidade+de+Maring%C3%A1+55,+2400-137+Leiria/@39.7489737,-8.8067348,219m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd22736cd53f06d1:0xe982bf71b19dd1d5!2m2!1d-8.8062746!2d39.7492919?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.7496491105813, -8.80636201431187
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Marinha Grande Municipal Market (25 min)",
+                image: "/around/local-markets/5.jpg",
+                text: "A traditional market offering fresh fruits, vegetables, meats, fish, and local products.",
+                extratext: (
+                    <>
+                        <p>
+                            <span className="font-bold">When: </span>
+                            Wednesday, Friday, and Saturday: 7:00 AM – 2:00 PM
+                        </p>
+                    </>
+                ),
+                address: (
+                    <>
+                        <span>
+                            {" "}
+                            Rua Guilherme Pereira Roldão, Marinha Grande
+                        </span>
+                        <br></br>
+                        <br></br>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/R.+Guilherme+Pereira+Rold%C3%A3o,+Marinha+Grande/@39.7561933,-8.9281118,92m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd220e816ed5b279:0x70b7852020dfd30c!2m2!1d-8.9283586!2d39.7563672?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.756369684638734, -8.928354217761406
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Praia do Pedrógão Municipal Market (30 min)",
+                image: "/around/local-markets/6.jpg",
+                text: "A coastal market offering fresh seafood, local produce, and beach-related items.",
+                extratext: (
+                    <>
+                        <p>
+                            <span className="font-bold">When: </span>
+                            Winter: Wednesday, Saturday, and Sunday: 9:00 AM –
+                            1:00 PM; Summer (July and August): Daily, 8:00 AM –
+                            3:00 PM
+                        </p>
+                    </>
+                ),
+                address: (
+                    <>
+                        <span>
+                            {" "}
+                            Rua Joaquim Costa Fialho, Praia do Pedrógão
+                        </span>
+                        <br></br>
+                        <br></br>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+Rua+Primeiro+de+Dezembro,+Pataias/R.+Joaquim+Costa+Fialho,+Pedrog%C3%A3o/@39.9223171,-8.951429,219m/data=!3m1!1e3!4m19!4m18!1m10!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!3m4!1m2!1d-8.9512997!2d39.9225625!3s0xd22165f5b18871d:0xdde00c6ebb98ad37!1m5!1m1!1s0xd22165f666e9c85:0xc6126e4af53d46bb!2m2!1d-8.9503897!2d39.9225954!3e0?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.922612264981666, -8.950393697580012
+                        </a>
+                    </>
+                ),
+            },
+        ],
+    },
+    /* Cities */
+    {
+        path: "cities",
+        title: "Cities",
+        description:
+            "Zira Houses is perfectly located on Portugal’s Silver Coast, offering easy access to popular travel destinations like Alcobaça, Nazaré, Leiria, Óbidos, and more. Discover charming towns rich in history, stunning architecture, beautiful beaches, local markets, and authentic Portuguese cuisine—all just a short drive from your peaceful holiday home. Perfect for day trips and cultural experiences during your stay.",
+        img: "/around/cities/cities.jpg",
+        content: [
+            {
+                title: "Alcobaça (25min)",
+                image: "/around/cities/1.jpg",
+                text: "Alcobaça is renowned for its impressive 12th-century Cistercian Monastery, a UNESCO World Heritage Site. The monastery houses the tombs of King Pedro I and Inês de Castro, whose tragic love story is a significant part of Portuguese history. The city offers charming streets, local crafts, and traditional pastries, making it a delightful destination for history and culture enthusiasts.",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+R.+Primeiro+de+Dezembro+25,+Burinhosa,+2445-022+Pataias/Alcoba%C3%A7a/@39.550298,-8.9741243,440m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a5ca4bcf120f:0x7c03b67566f99493!2m2!1d-8.9730531!2d39.5503343?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.55037864536767, -8.97309969256865
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Nazaré (20min)",
+                image: "/around/cities/2.jpg",
+                text: "Nazaré is a picturesque coastal town famous for its massive waves, attracting surfers from around the world. The Praia do Norte beach is known for record-breaking surf conditions. Beyond surfing, visitors can enjoy the town's rich fishing traditions, vibrant markets, and panoramic views from the Sítio district.",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+R.+Primeiro+de+Dezembro+25,+Burinhosa,+2445-022+Pataias/Nazar%C3%A9/@39.6020962,-9.0683338,247m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd18a8232f6ad417:0x3d2d871af42106f!2m2!1d-9.0677509!2d39.6015562?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.60155225689692, -9.0677557021835
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Leiria (25min)",
+                image: "/around/cities/3.jpg",
+                text: "Leiria is a dynamic city that blends historical charm with modern culture. Dominated by a medieval castle, the city offers a lively arts scene, including music festivals and exhibitions. Stroll through the historic center, visit the Leiria Museum, or relax along the Lis River's scenic banks.",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+R.+Primeiro+de+Dezembro+25,+Burinhosa,+2445-022+Pataias/Leiria/@39.7490043,-8.8093202,261m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd22731534c9b2b9:0x4daf832739d43c6c!2m2!1d-8.807683!2d39.7495331?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.74952790293295, -8.807852979882645
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Batalha (25min)",
+                image: "/around/cities/4.jpg",
+                text: "Batalha is home to the Monastery of Santa Maria da Vitória, a masterpiece of Gothic architecture and a UNESCO World Heritage Site. Built to commemorate the 1385 Battle of Aljubarrota, the monastery is a symbol of Portuguese independence. The town offers a peaceful atmosphere with historical significance.",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/dir/Zira+Houses,+R.+Primeiro+de+Dezembro+25,+Burinhosa,+2445-022+Pataias/Batalha/@39.6588761,-8.8253588,261m/data=!3m1!1e3!4m13!4m12!1m5!1m1!1s0xd220911a5fbd031:0x55d96a183febc760!2m2!1d-8.986533!2d39.7009169!1m5!1m1!1s0xd22754dcc2a014b:0x40721e63fabf1bed!2m2!1d-8.8241787!2d39.6583864?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.65840088860129, -8.824216929800183
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Marinha Grande (15min)",
+                image: "/around/cities/5.jpg",
+                text: "Marinha Grande is known as the 'Glass Capital' of Portugal due to its long-standing glass manufacturing industry. Visitors can explore the Glass Museum to learn about the city's artisanal heritage. Surrounded by the Leiria Pine Forest, it's also a gateway to beautiful coastal areas like São Pedro de Moel.",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/place/Parque+da+Cerca/@39.742084,-8.9499254,2088m/data=!3m1!1e3!4m23!1m16!4m15!1m6!1m2!1s0xd220911a5fbd031:0x55d96a183febc760!2sZira+Houses,+R.+Primeiro+de+Dezembro+25,+Burinhosa,+2445-022+Pataias!2m2!1d-8.986533!2d39.7009169!1m6!1m2!1s0xd220fec37588cef:0xc50ca41b0590807e!2sParque+da+Cerca,+R.+Bernardino+Jos%C3%A9+Gomes+2,+2430-241+Marinha+Grande!2m2!1d-8.9354414!2d39.7487869!3e0!3m5!1s0xd220fec37588cef:0xc50ca41b0590807e!8m2!3d39.7487869!4d-8.9354414!16s%2Fg%2F11fpg0plnc?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.749235610294015, -8.93543139639178
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Caldas da Rainha (30min)",
+                image: "/around/cities/6.jpg",
+                text: "A vibrant city known for its ceramics, daily fruit market, and cultural scene. Don’t miss the quirky Bordallo Pinheiro museum and the thermal park gardens.",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/place/Parque+da+Cerca/@39.4062365,-9.1359624,221m/data=!3m1!1e3!4m23!1m16!4m15!1m6!1m2!1s0xd220911a5fbd031:0x55d96a183febc760!2sZira+Houses,+R.+Primeiro+de+Dezembro+25,+Burinhosa,+2445-022+Pataias!2m2!1d-8.986533!2d39.7009169!1m6!1m2!1s0xd18b250a082a2d1:0xb39a198d8e8efc9c!2sCaldas+da+Rainha!2m2!1d-9.1348206!2d39.4061871!3e0!3m5!1s0xd220fec37588cef:0xc50ca41b0590807e!8m2!3d39.7487869!4d-8.9354414!16s%2Fg%2F11fpg0plnc?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.40622514760229, -9.13482777934543
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Óbidos (35min)",
+                image: "/around/cities/7.jpg",
+                text: "A fairytale medieval village enclosed by castle walls. Walk its picturesque alleys, try Ginja in a chocolate cup, and enjoy festivals all year round.",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/place/Parque+da+Cerca/@39.3574928,-9.1584236,262m/data=!3m1!1e3!4m23!1m16!4m15!1m6!1m2!1s0xd220911a5fbd031:0x55d96a183febc760!2sZira+Houses,+R.+Primeiro+de+Dezembro+25,+Burinhosa,+2445-022+Pataias!2m2!1d-8.986533!2d39.7009169!1m6!1m2!1s0xd18b49eef1edec5:0x170a628ab34d3bb3!2zw5NiaWRvcw!2m2!1d-9.1578614!2d39.3572399!3e0!3m5!1s0xd220fec37588cef:0xc50ca41b0590807e!8m2!3d39.7487869!4d-8.9354414!16s%2Fg%2F11fpg0plnc?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.3572745513744, -9.157862168311405
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Peniche (50min)",
+                image: "/around/cities/8.jpg",
+                text: "A vibrant fishing town and major surf hub, Peniche is famous for its rugged coastline, beautiful beaches, and the nearby Berlengas archipelago—a nature reserve perfect for boat trips and hiking.",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/place/Parque+da+Cerca/@39.3602375,-9.3904002,624m/data=!3m1!1e3!4m23!1m16!4m15!1m6!1m2!1s0xd220911a5fbd031:0x55d96a183febc760!2sZira+Houses,+R.+Primeiro+de+Dezembro+25,+Burinhosa,+2445-022+Pataias!2m2!1d-8.986533!2d39.7009169!1m6!1m2!1s0xd1f45c49805a145:0x26caf596a0956bf3!2sPeniche!2m2!1d-9.387622!2d39.3603291!3e0!3m5!1s0xd220fec37588cef:0xc50ca41b0590807e!8m2!3d39.7487869!4d-8.9354414!16s%2Fg%2F11fpg0plnc?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.36042227116031, -9.387638692479117
+                        </a>
+                    </>
+                ),
+            },
+            {
+                title: "Fátima (40min)",
+                image: "/around/cities/9.jpg",
+                text: "One of the most important pilgrimage sites in the world, Fátima attracts millions of visitors annually with its Sanctuary of Our Lady of Fátima, religious festivals, and peaceful atmosphere.",
+                address: (
+                    <>
+                        GPS:{" "}
+                        <a href="https://www.google.com/maps/place/Parque+da+Cerca/@39.6179533,-8.6548267,523m/data=!3m1!1e3!4m23!1m16!4m15!1m6!1m2!1s0xd220911a5fbd031:0x55d96a183febc760!2sZira+Houses,+R.+Primeiro+de+Dezembro+25,+Burinhosa,+2445-022+Pataias!2m2!1d-8.986533!2d39.7009169!1m6!1m2!1s0xd1883467cb1711d:0x500ebbde49105f0!2zRsOhdGltYQ!2m2!1d-8.6521422!2d39.6172063!3e0!3m5!1s0xd220fec37588cef:0xc50ca41b0590807e!8m2!3d39.7487869!4d-8.9354414!16s%2Fg%2F11fpg0plnc?hl=pt-PT&entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D">
+                            39.61732182683228, -8.652160100846128
+                        </a>
+                    </>
+                ),
             },
         ],
     },

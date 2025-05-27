@@ -10,11 +10,9 @@ export default function Footer() {
     return (
         <div className="bg-black flex justify-center">
             <div className="">
-                <div className="w-screen grid grid-cols-11 lg:py-[20px] py-[50px] max-w-[2560px]">
+                <div className="w-screen grid grid-cols-11 py-[50px] max-w-[2560px]">
                     <div className="col-start-2 col-span-9 flex lg:flex-row flex-col lg:space-y-0 space-y-[50px] items-center justify-between ">
-                        <h1 className="text-white uppercase sm:text-[48px] text-[30px]">
-                            ZIRA HOUSES
-                        </h1>
+                        <img className="w-[300px]" src="/LogoWhite.png" />
                         {footer.map((item, i) => (
                             <div key={i}>
                                 <Link

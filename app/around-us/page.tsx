@@ -6,7 +6,7 @@ import PageHeading from "@/components/pageHeading";
 export default function AroundUs() {
     return (
         <div className="mb-[100px]">
-            <PageHeading img="/Bed.png" title="Around Us">
+            <PageHeading img="/beach.png" title="Around Us">
                 <p>
                     Discover Portugal’s Silver Coast, a hidden gem where golden
                     beaches, scenic cliffs, and charming seaside villages create
@@ -38,7 +38,7 @@ export default function AroundUs() {
                                 img={page.img}
                             >
                                 <Button
-                                    text="See more"
+                                    text="Explore"
                                     href={`around-us/${page.path}`}
                                 ></Button>
                             </Card>

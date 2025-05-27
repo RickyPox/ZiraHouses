@@ -4,7 +4,7 @@ export default function Contacts() {
     return (
         <div>
             <div className="">
-                <PageHeading img="/Bed.png" title="About Us">
+                <PageHeading img="/Bed.png" title="Contacts & Location">
                     <p>
                         {" "}
                         I’m Mariana, a proud Superhost on Airbnb with over 10
@@ -23,12 +23,50 @@ export default function Contacts() {
                         next family vacation.
                     </p>
 
-                    <p className="font-bold text-center">
-                        You can contact me at:{" "}
-                        <a href="mailto:info@zirahouses.com">
+                    <p className="font-bold text-center mt-4">
+                        Any questions or special requests? Just send us an email
+                        at{" "}
+                        <a
+                            className="underline"
+                            href="mailto:info@zirahouses.com"
+                        >
                             info@zirahouses.com
-                        </a>
+                        </a>{" "}
+                        – we're here for you!
                     </p>
+
+                    <div className="flex lg:flex-row flex-col mt-20 space-x-[50px] justify-between">
+                        <div className="">
+                            <h3>Adress:</h3>
+                            <p>Zira Houses</p>
+                            <p>R. Primeiro de Dezembro 25, Burinhosa</p>
+                            <p>2445-022 Pataias, Portugal</p>
+                        </div>
+                        <div className="">
+                            <h3>
+                                <a
+                                    target="_blank"
+                                    href="https://maps.app.goo.gl/VGtkEdfnLGWzxm9d6"
+                                >
+                                    GPS_ 39.70093, -8.98654
+                                </a>
+                            </h3>
+                        </div>
+                        <div>
+                            <h3>Licenses</h3>
+                            <p>RNAL: 149401/AL</p>
+                            <p>
+                                More information:{" "}
+                                <a
+                                    target="_blank"
+                                    href="https://rnt.turismodeportugal.pt/RNT/Pesquisa_AL.aspx"
+                                    className="font-bold underline"
+                                >
+                                    RNAL | RNT
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </PageHeading>
             </div>
             <iframe

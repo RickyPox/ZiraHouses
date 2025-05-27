@@ -28,9 +28,20 @@ export default function FAQ() {
                 <p>
                     Find quick answers to the most common questions about our
                     services, policies, and support. Whether you're looking for
-                    help with orders, technical issues, or general inquiries,
-                    this page is here to guide you with clear and concise
+                    help with bookings, your stay, or general inquiries, this
+                    page is here to guide you with clear and concise
                     information.
+                </p>
+                <p className="mt-4">Still have questions?</p>
+                <p className="mt-4">
+                    Feel free to email us at{" "}
+                    <a
+                        className="font-bold underline"
+                        href="mailto:info@zirahouses.com"
+                    >
+                        info@zirahouses.com
+                    </a>{" "}
+                    – we’re happy to help!
                 </p>
             </PageHeading>
             <div className="gridLayout grid ">

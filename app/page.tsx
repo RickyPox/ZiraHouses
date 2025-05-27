@@ -21,10 +21,14 @@ export default function Home() {
                             <h1 className="text-white">
                                 Welcome To <br></br> Zira Houses
                             </h1>
-                            <p className="text-white md:mt-[20px] mt-[10px] pr-[10px]">
-                                We are Zira Houses, the best house in Silver
-                                Coast, Portugal
-                            </p>
+                            <div className="w-1/2">
+                                <p className="text-white md:mt-[20px] mt-[10px] pr-[10px]">
+                                    We are Zira Houses, your welcoming holiday
+                                    home on the Silver Coast of Portugal, ideal
+                                    for families and travelers who love nature
+                                    and the beach.
+                                </p>
+                            </div>
                             <Button
                                 className="mt-[50px]"
                                 text="Book with us"

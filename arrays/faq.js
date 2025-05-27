@@ -109,6 +109,39 @@ const faq = [
         title: "LOCATION & TRANSPORT",
         questions: [
             {
+                question:
+                    "How can I find the address or directions to Zira Houses?",
+                answer: (
+                    <>
+                        "You can find more details on our{" "}
+                        <a
+                            target="_blank"
+                            href="/contacts"
+                            className="underline bg-black text-white"
+                            style={{ padding: "5px" }}
+                        >
+                            Contacts & Locations
+                        </a>{" "}
+                        page."
+                        <br></br>
+                        <br></br>
+                        <span className="font-bold">Adress:</span> Zira Houses
+                        R. Primeiro de Dezembro 25, Burinhosa 2445-022 Pataias,
+                        Portugal
+                        <br></br>
+                        <br></br>
+                        <a
+                            target="_blank"
+                            href="https://maps.app.goo.gl/VGtkEdfnLGWzxm9d6"
+                            className="underline bg-black text-white"
+                            style={{ padding: "5px" }}
+                        >
+                            GPS_ 39.70093, -8.98654
+                        </a>
+                    </>
+                ),
+            },
+            {
                 question: "How far is Zira Houses from the nearest beach?",
                 answer: "Zira Houses is located just a short drive from the beautiful beaches of the West Coast. The nearest beach (Paredes da Vitória beach) is about 8 minutes away by car. ",
             },
@@ -163,7 +196,32 @@ const faq = [
             {
                 question:
                     "Is there an emergency contact or first aid kit available?",
-                answer: "Yes, your safety is our priority. We have an emergency contact list available in the house, including local hospitals, pharmacies, and emergency services. Additionally, a fully stocked first aid kit is provided on the premises for any minor injuries or medical needs during your stay.",
+                answer: (
+                    <>
+                        Yes, your safety is our priority. A fully stocked first
+                        aid kit is available on the premises. You’ll also find a
+                        printed emergency contact list in the house, including
+                        local hospitals, pharmacies, and emergency services.
+                        <br></br>
+                        <br></br>
+                        For your reference:
+                        <br></br>
+                        <br></br>
+                        <span className="font-bold">
+                            Emergency number in Portugal:
+                        </span>{" "}
+                        112
+                        <br></br>
+                        <br></br>
+                        <span className="font-bold">Nearest hospital: </span>
+                        Hospital de Leiria (approx. 25 minutes by car)
+                        <br></br>
+                        <br></br>
+                        In case of any urgent need, you can also contact us —
+                        details are provided in the welcome folder and on the
+                        main contact board inside the house.w
+                    </>
+                ),
             },
         ],
     },
@@ -243,7 +301,25 @@ const faq = [
         questions: [
             {
                 question: "Is there a Complaints Book available?",
-                answer: "Yes. This establishment has both a physical and an Electronic Complaints Book, in compliance with Portuguese regulations.",
+                answer: (
+                    <>
+                        Yes. This establishment has both a physical and an
+                        Electronic Complaints Book, in compliance with
+                        Portuguese regulations.
+                        <br></br>
+                        <br></br>
+                        You can access the Electronic Complaints Book here:
+                        <a
+                            target="_blank"
+                            href="https://www.livroreclamacoes.pt/Inicio/"
+                            rel="noopener noreferrer"
+                            className="underline bg-black text-white"
+                            style={{ padding: "5px" }}
+                        >
+                            Complaints Book
+                        </a>
+                    </>
+                ),
             },
         ],
     },

@@ -25,10 +25,7 @@ export default function MasonryDisplay({ content }: any) {
                         {item.address && <p>{item.address}</p>}
                         {item.extralink && <p>{item.extralink}</p>}
                         {item.website && (
-                            <Button
-                                href={item.website}
-                                text="See more"
-                            ></Button>
+                            <Button href={item.website} text="Explore"></Button>
                         )}
                     </Card>
                 </div>
