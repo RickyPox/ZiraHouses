@@ -1,27 +1,47 @@
-import around from "@/arrays/around";
+import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
 import MansonryLayout from "@/components/masonry";
 import PageHeading from "@/components/pageHeading";
 
+// Gera os caminhos estáticos com base nos dados da Supabase
 export async function generateStaticParams() {
-    return around.map((page) => ({ path: page.path }));
-}
-type Params = Promise<{ path: string }>;
-export default async function Pagina({ params }: { params: Params }) {
-    const { path } = await params;
-    const page = around.find((p) => p.path === path);
+    const { data, error } = await supabase.from("around_us").select("path");
 
-    if (!page) {
+    if (error || !data) {
+        console.error("Erro ao buscar paths da Supabase:", error);
+        return [];
+    }
+
+    return data.map((item) => ({ path: item.path.toString() }));
+}
+
+// Props tipadas
+type Props = {
+    params: { path: string };
+};
+
+// Página dinâmica
+export default async function Pagina({ params }: Props) {
+    const { path } = await params;
+
+    const { data: page, error } = await supabase
+        .from("around_us")
+        .select("*")
+        .eq("path", path)
+        .single();
+
+    if (error || !page) {
+        console.error("Erro ao buscar página:", error);
         notFound();
     }
 
     return (
         <div className="mb-[100px]">
-            <PageHeading img={page.img} title={page.title}>
+            <PageHeading img={page.image_link} title={page.title}>
                 <p>{page.description}</p>
             </PageHeading>
 
-            <MansonryLayout content={page.content}></MansonryLayout>
+            <MansonryLayout content={page.content} />
         </div>
     );
 }

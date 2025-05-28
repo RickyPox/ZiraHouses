@@ -3,6 +3,7 @@ import Card from "@/components/card";
 import Reviews from "@/components/reviews";
 import Rules from "@/components/rules";
 import pages from "@/arrays/pages";
+import Reviews_Slider from "@/components/reviews_slider";
 
 export default function Home() {
     return (
@@ -66,9 +67,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="flex justify-center">
-                <div className="col-start-2 col-span-9 pt-[100px] pb-[200px] common-margin max-w-[1920px]">
-                    <Rules></Rules>
-                </div>
+                <div className="col-start-2 col-span-9 pt-[100px] pb-[200px] common-margin max-w-[1920px]"></div>
             </div>
         </div>
     );

@@ -1,9 +1,19 @@
-import around from "@/arrays/around";
+import { supabase } from "@/lib/supabaseClient";
+import { notFound } from "next/navigation";
 import Button from "@/components/button";
 import Card from "@/components/card";
 import PageHeading from "@/components/pageHeading";
 
-export default function AroundUs() {
+export default async function AroundUs() {
+    const { data: pages, error } = await supabase
+        .from("around_us")
+        .select("*")
+        .order("id", { ascending: true });
+
+    if (error || !pages) {
+        return { notFound };
+    }
+
     return (
         <div className="mb-[100px]">
             <PageHeading img="/beach.png" title="Around Us">
@@ -30,12 +40,12 @@ export default function AroundUs() {
 
             <div className="flex justify-center">
                 <div className="col-start-1 col-span-9 lg:grid grid-cols-9 flex flex-col lg:gap-y-[20px] gap-y-[50px] gap-x-[20px] pt-[100px] common-margin max-w-[1920px]">
-                    {around.map((page, i) => (
+                    {pages.map((page: any, i: any) => (
                         <div key={i} className="col-span-3">
                             <Card
                                 title={page.title}
                                 text={page.description}
-                                img={page.img}
+                                img={page.image_link}
                             >
                                 <Button
                                     text="Explore"

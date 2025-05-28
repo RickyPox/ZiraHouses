@@ -7,7 +7,10 @@ export default function Button(props: any) {
 
     return (
         <div className="flex">
-            <Link href={props.href ? props.href : "#"} target="_blank">
+            <Link
+                href={props.href ? props.href : "#"}
+                target={props.target ? props.target : ""}
+            >
                 <div
                     className={`${
                         props.className

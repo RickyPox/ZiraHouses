@@ -30,24 +30,27 @@ export default function PageHeading(props: any) {
 
     return (
         <div>
-            <div className="relative">
-                <div className="bg-black/40 w-full h-full absolute top-0 left-0" />
-                <img
-                    className="w-full max-h-[700px] object-cover"
-                    src={props.img}
-                    alt={props.title + "_img"}
-                />
-            </div>
+            {props.img && (
+                <div className="relative">
+                    <div className="bg-black/40 w-full h-full absolute top-0 left-0" />
+                    <img
+                        className="w-full max-h-[700px] object-cover"
+                        src={props.img}
+                        alt={props.title + "_img"}
+                    />
+                </div>
+            )}
             <div className="flex justify-center">
                 <div className="max-w-[1920px] lg:grid gridLayout">
                     <div
                         ref={whiteBoxRef}
                         className="relative col-start-2 col-span-9 grid grid-cols-9 bg-white py-[30px] gap-y-[40px] z-20 lg:mx-0 mx-[10px]"
                         style={{
-                            marginTop:
-                                marginTopValue > 0
+                            marginTop: props.img
+                                ? marginTopValue > 0
                                     ? `-${marginTopValue}px`
-                                    : "-50px",
+                                    : "-50px"
+                                : 150,
                         }}
                     >
                         <h2 className="col-span-full text-center px-[20px]">
