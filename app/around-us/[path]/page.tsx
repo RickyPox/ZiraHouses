@@ -15,9 +15,10 @@ export async function generateStaticParams() {
     return data.map((item) => ({ path: item.path.toString() }));
 }
 
-// Página dinâmica
-export default async function Pagina({ params }: { params: { path: string } }) {
-    const { path } = params;
+type Params = Promise<{ path: string }>;
+
+export default async function Pagina({ params }: { params: Params }) {
+    const { path } = await params;
 
     const { data: page, error } = await supabase
         .from("around_us")
