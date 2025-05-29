@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 
 // Página dinâmica
 export default async function Pagina({ params }: { params: { path: string } }) {
-    const { path } = await params;
+    const { path } = params;
 
     const { data: page, error } = await supabase
         .from("around_us")
