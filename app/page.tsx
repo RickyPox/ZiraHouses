@@ -1,5 +1,6 @@
 import Button from "@/components/button";
 import Card from "@/components/card";
+import Carousel from "@/components/carousel";
 import Reviews from "@/components/reviews";
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
@@ -60,7 +61,9 @@ export default async function Home() {
                 </div>
             </div>
             <div className="flex justify-center">
-                <div className="col-start-2 col-span-9 pt-[100px] pb-[200px] common-margin max-w-[1920px]"></div>
+                <div className="col-start-2 col-span-9 pt-[100px]">
+                    <Carousel></Carousel>
+                </div>
             </div>
         </div>
     );
