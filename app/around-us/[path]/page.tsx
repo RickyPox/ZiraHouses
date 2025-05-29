@@ -15,13 +15,8 @@ export async function generateStaticParams() {
     return data.map((item) => ({ path: item.path.toString() }));
 }
 
-// Props tipadas
-type Props = {
-    params: { path: string };
-};
-
 // Página dinâmica
-export default async function Pagina({ params }: Props) {
+export default async function Pagina({ params }: { params: { path: string } }) {
     const { path } = await params;
 
     const { data: page, error } = await supabase
