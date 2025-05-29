@@ -35,8 +35,8 @@ export default async function About() {
             </PageHeading>
             <div className="flex justify-center">
                 <div
-                    className="col-start-2 col-span-9 grid grid-cols-9 gap-y-[100px] pt-[100px] common-margin max-w-[1920px]"
-                    style={{ gridAutoRows: "1fr" }}
+                    className="grid grid-cols-9 lg:gap-y-[150px] gap-y-[50px] pt-[100px] common-margin max-w-[1920px]"
+                    style={{ gridAutoRows: "auto" }}
                 >
                     {rooms.map((room, i) => (
                         <div key={i} className={`col-start-1 col-span-full`}>
