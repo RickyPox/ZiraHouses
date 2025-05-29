@@ -4,38 +4,28 @@ export default function Contacts() {
     return (
         <div>
             <div className="">
-                <PageHeading img="/Bed.png" title="Contacts & Location">
+                <PageHeading img="/contacts.jpg" title="Contacts & Location">
                     <p>
                         {" "}
-                        I’m Mariana, a proud Superhost on Airbnb with over 10
-                        years of experience hosting guests at Zira Houses, a
-                        family-friendly accommodation on Portugal’s Silver
-                        Coast. My mission is to provide families with a relaxing
-                        seaside getaway in a peaceful, private setting, ensuring
-                        a memorable and comfortable stay.
+                        I’m Mariana, a proud Superhost on Airbnb with over 10 years of experience hosting guests at Zira Houses, a family-friendly
+                        accommodation on Portugal’s Silver Coast. My mission is to provide families with a relaxing seaside getaway in a peaceful,
+                        private setting, ensuring a memorable and comfortable stay.
                     </p>
 
                     <p className="mt-4">
-                        With personalized hospitality and local insights, I
-                        guarantee a true authentic Portugal experience. Whether
-                        you’re looking for a nature escape or simply a place to
-                        unwind, Zira Houses offers the perfect base for your
-                        next family vacation.
+                        With personalized hospitality and local insights, I guarantee a true authentic Portugal experience. Whether you’re looking for
+                        a nature escape or simply a place to unwind, Zira Houses offers the perfect base for your next family vacation.
                     </p>
 
                     <p className="font-bold text-center mt-4">
-                        Any questions or special requests? Just send us an email
-                        at{" "}
-                        <a
-                            className="underline"
-                            href="mailto:info@zirahouses.com"
-                        >
+                        Any questions or special requests? Just send us an email at{" "}
+                        <a className="underline" href="mailto:info@zirahouses.com">
                             info@zirahouses.com
                         </a>{" "}
                         – we're here for you!
                     </p>
 
-                    <div className="flex lg:flex-row flex-col mt-20 space-x-[50px] justify-between">
+                    <div className="flex lg:flex-row flex-col mt-20 lg:space-x-[50px] space-y-[20px] lg:space-y-0 justify-between">
                         <div className="">
                             <h3>Adress:</h3>
                             <p>Zira Houses</p>
@@ -44,10 +34,7 @@ export default function Contacts() {
                         </div>
                         <div className="">
                             <h3>
-                                <a
-                                    target="_blank"
-                                    href="https://maps.app.goo.gl/VGtkEdfnLGWzxm9d6"
-                                >
+                                <a target="_blank" href="https://maps.app.goo.gl/VGtkEdfnLGWzxm9d6">
                                     GPS_ 39.70093, -8.98654
                                 </a>
                             </h3>
@@ -57,11 +44,7 @@ export default function Contacts() {
                             <p>RNAL: 149401/AL</p>
                             <p>
                                 More information:{" "}
-                                <a
-                                    target="_blank"
-                                    href="https://rnt.turismodeportugal.pt/RNT/Pesquisa_AL.aspx"
-                                    className="font-bold underline"
-                                >
+                                <a target="_blank" href="https://rnt.turismodeportugal.pt/RNT/Pesquisa_AL.aspx" className="font-bold underline">
                                     RNAL | RNT
                                 </a>
                             </p>

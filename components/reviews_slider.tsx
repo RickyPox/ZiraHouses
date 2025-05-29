@@ -33,12 +33,8 @@ export default function Reviews_Slider({ reviews }: { reviews: any[] }) {
                     <SwiperSlide key={i}>
                         <div className="bg-white p-[20px] h-full flex flex-col">
                             <h3>- {review.name}</h3>
-                            <p className="flex-grow mt-[20px]">
-                                {review.comment}
-                            </p>
-                            <p className="font-bold text-right mt-[50px]">
-                                {review.date}
-                            </p>
+                            <p className="flex-grow mt-[20px]">{review.comment}</p>
+                            <p className="font-bold text-right mt-[50px]">{review.date}</p>
                         </div>
                     </SwiperSlide>
                 ))}

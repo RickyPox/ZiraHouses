@@ -1,20 +1,21 @@
 import Button from "@/components/button";
 import Card from "@/components/card";
 import Reviews from "@/components/reviews";
-import Rules from "@/components/rules";
-import pages from "@/arrays/pages";
-import Reviews_Slider from "@/components/reviews_slider";
+import { supabase } from "@/lib/supabaseClient";
+import { notFound } from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
+    const { data: pages, error } = await supabase.from("pages").select("*").order("id", { ascending: true });
+
+    if (error || !pages) {
+        return { notFound };
+    }
     return (
         <div className="flex flex-col ">
             <div className="relative col-start-1 col-span-full ">
                 <div className="relative">
                     <div className="bg-black/30 w-full h-full absolute top-0 left-0" />
-                    <img
-                        className="w-full lg:max-h-[900px] lg:h-auto md:h-[50vh] h-[50vh] object-cover"
-                        src="/Landing.png"
-                    />
+                    <img className="w-full lg:max-h-[900px] lg:h-auto md:h-[50vh] h-[50vh] object-cover" src="/Landing.png" />
                 </div>
                 <div className="flex justify-center">
                     <div className="absolute top-[30%] lg:grid lg:gridLayout w-full max-w-[1920px]">
@@ -24,10 +25,8 @@ export default function Home() {
                             </h1>
                             <div className="w-1/2">
                                 <p className="text-white md:mt-[20px] mt-[10px] pr-[10px]">
-                                    We are Zira Houses, your welcoming holiday
-                                    home on the Silver Coast of Portugal, ideal
-                                    for families and travelers who love nature
-                                    and the beach.
+                                    We are Zira Houses, your welcoming holiday home on the Silver Coast of Portugal, ideal for families and travelers
+                                    who love nature and the beach.
                                 </p>
                             </div>
                             <Button
@@ -43,13 +42,7 @@ export default function Home() {
             <div className="flex justify-center">
                 <div className="max-w-[1920px] col-start-1 col-span-9 lg:grid grid-cols-9 flex flex-col lg:gap-y-0 gap-y-[50px] gap-x-[20px] pt-[100px] common-margin">
                     {pages.map((page, i) => (
-                        <Card
-                            key={i}
-                            className="col-span-3"
-                            title={page.title}
-                            img={page.img}
-                            text={page.description}
-                        >
+                        <Card key={i} className="col-span-3" title={page.title} img={page.image} text={page.description}>
                             <Button text="See more" href={page.href}></Button>
                         </Card>
                     ))}

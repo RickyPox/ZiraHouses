@@ -41,6 +41,7 @@ export default function FloatingButton() {
                         className="fixed right-0 bottom-[50%] z-20 origin-top-right "
                     >
                         <Button
+                            target="_blank"
                             text="Book with us"
                             href="https://www.airbnb.com/rooms/904972187690070709?source_impression_id=p3_1746637459_P3IWiTHiExUXzYt5"
                         ></Button>
