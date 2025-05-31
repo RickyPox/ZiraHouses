@@ -1,37 +1,30 @@
 import BigCard from "@/components/bigcard";
 import PageHeading from "@/components/pageHeading";
+
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
 
 export default async function About() {
-    const { data: rooms, error } = await supabase.from("rooms").select("*").order("id", { ascending: true });
+    const { data: rooms, error: error1 } = await supabase.from("rooms").select("*").order("id", { ascending: true });
+    const { data: pageheading, error: error2 } = await supabase.from("page_heading").select("*").eq("id", 1).single();
 
-    if (error || !rooms) {
+    if (error1 || !rooms) {
+        return { notFound };
+    }
+
+    if (error2 || !pageheading) {
         return { notFound };
     }
 
     return (
         <div className="mb-[100px]">
-            <PageHeading img="/about.jpg" title="About the House">
-                <p>
-                    Welcome to Zira Houses, the best family-friendly accommodation on Portugal’s Silver Coast. Nestled in the peaceful Burinhosa
-                    village, our home is the perfect retreat to relax, disconnect, and explore the stunning Oeste region.
-                </p>
-
-                <p className="mt-4">
-                    Our cozy and comfortable house features everything you need for a memorable family vacation, including spacious living areas, a
-                    fully equipped kitchen, and a beautiful outdoor space to enjoy the fresh air. Whether you're looking to unwind in a peaceful
-                    atmosphere or gather together for family meals, Zira Houses offers the perfect setting for creating unforgettable moments.
-                </p>
-
-                <p className="mt-4">
-                    With easy access to golden beaches, scenic nature trails, and charming towns like Nazaré, São Pedro de Moel, Paredes da Vitória,
-                    and São Martinho do Porto, Zira Houses is an ideal choice for families seeking both relaxation and adventure.
-                </p>
-
-                <p className="font-bold text-center mt-4">
-                    Relax at Zira Houses, the perfect peaceful escape for families on Portugal’s Silver Coast.
-                </p>
+            <PageHeading img={pageheading.image} title={pageheading.title}>
+                {pageheading.content.map((item: any, index: any) => (
+                    <p key={index} className={index > 0 ? "mt-4" : ""}>
+                        {item.paragraph}
+                    </p>
+                ))}
+                <p className="font-bold text-center mt-4">{pageheading.bold}</p>
             </PageHeading>
             <div className="flex justify-center">
                 <div

@@ -1,54 +1,55 @@
 import PageHeading from "@/components/pageHeading";
+import { supabase } from "@/lib/supabaseClient";
+import { notFound } from "next/navigation";
 
-export default function Contacts() {
+export default async function Contacts() {
+    const { data: pageheading, error } = await supabase.from("page_heading").select("*").eq("id", 3).single();
+    if (error || !pageheading) {
+        notFound();
+    }
     return (
         <div>
             <div className="">
-                <PageHeading img="/contacts.jpg" title="Contacts & Location">
-                    <p>
-                        {" "}
-                        I’m Mariana, a proud Superhost on Airbnb with over 10 years of experience hosting guests at Zira Houses, a family-friendly
-                        accommodation on Portugal’s Silver Coast. My mission is to provide families with a relaxing seaside getaway in a peaceful,
-                        private setting, ensuring a memorable and comfortable stay.
-                    </p>
-
-                    <p className="mt-4">
-                        With personalized hospitality and local insights, I guarantee a true authentic Portugal experience. Whether you’re looking for
-                        a nature escape or simply a place to unwind, Zira Houses offers the perfect base for your next family vacation.
-                    </p>
-
-                    <p className="font-bold text-center mt-4">
-                        Any questions or special requests? Just send us an email at{" "}
-                        <a className="underline" href="mailto:info@zirahouses.com">
-                            info@zirahouses.com
-                        </a>{" "}
-                        – we're here for you!
-                    </p>
-
-                    <div className="flex lg:flex-row flex-col mt-20 lg:space-x-[50px] space-y-[20px] lg:space-y-0 justify-between">
-                        <div className="">
-                            <h3>Adress:</h3>
-                            <p>Zira Houses</p>
-                            <p>R. Primeiro de Dezembro 25, Burinhosa</p>
-                            <p>2445-022 Pataias, Portugal</p>
-                        </div>
-                        <div className="">
-                            <h3>
-                                <a target="_blank" href="https://maps.app.goo.gl/VGtkEdfnLGWzxm9d6">
-                                    GPS_ 39.70093, -8.98654
-                                </a>
-                            </h3>
-                        </div>
-                        <div>
-                            <h3>Licenses</h3>
-                            <p>RNAL: 149401/AL</p>
-                            <p>
-                                More information:{" "}
-                                <a target="_blank" href="https://rnt.turismodeportugal.pt/RNT/Pesquisa_AL.aspx" className="font-bold underline">
-                                    RNAL | RNT
-                                </a>
+                <PageHeading img={pageheading.image} title={pageheading.title}>
+                    <div>
+                        {pageheading.content.paragraph &&
+                            pageheading.content.paragraph.map((item: any, index: number) => (
+                                <p key={index} className={index > 0 ? "mt-4" : ""}>
+                                    {item}
+                                </p>
+                            ))}
+                        {pageheading.content.link && (
+                            <p className="font-bold mt-4 text-center">
+                                {pageheading.content.link.before_link}{" "}
+                                <a className="underline" href={pageheading.content.link.url}>
+                                    {pageheading.content.link.link_text}
+                                </a>{" "}
+                                {pageheading.content.link.after_link}
                             </p>
-                        </div>
+                        )}
+                        {pageheading.content.extraInfo && (
+                            <div className="flex lg:flex-row flex-col mt-20 lg:space-x-[50px] space-y-[20px] lg:space-y-0 justify-between">
+                                {pageheading.content.extraInfo.map((item: any, i: any) => (
+                                    <div key={i}>
+                                        {item.title && <h3>{item.title}</h3>}
+                                        {item.info &&
+                                            (Array.isArray(item.info) ? (
+                                                item.info.map((line: any, index: number) => <p key={index}>{line}</p>)
+                                            ) : (
+                                                <p>{item.info}</p>
+                                            ))}
+                                        {item.url && (
+                                            <p className="font-bold">
+                                                {item.url_before}
+                                                <a href={item.url} className="underline">
+                                                    {item.url_text}
+                                                </a>
+                                            </p>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </PageHeading>
             </div>

@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import MansonryLayout from "@/components/masonry";
 import PageHeading from "@/components/pageHeading";
 
-// Gera os caminhos estáticos com base nos dados da Supabase
 export async function generateStaticParams() {
     const { data, error } = await supabase.from("around_us").select("path");
 
@@ -20,11 +19,7 @@ type Params = Promise<{ path: string }>;
 export default async function Pagina({ params }: { params: Params }) {
     const { path } = await params;
 
-    const { data: page, error } = await supabase
-        .from("around_us")
-        .select("*")
-        .eq("path", path)
-        .single();
+    const { data: page, error } = await supabase.from("around_us").select("*").eq("path", path).single();
 
     if (error || !page) {
         console.error("Erro ao buscar página:", error);
