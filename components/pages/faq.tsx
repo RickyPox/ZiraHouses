@@ -3,15 +3,15 @@ import PageHeading from "@/components/pageHeading";
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
 
-export default async function FAQ() {
-    const { data: pageheading, error } = await supabase.from("page_heading").select("*").eq("id", 4).single();
-    if (error || !pageheading) {
+export default async function FAQ({ lang }: { lang: string }) {
+    const { data: pageheading, error: headingError } = await supabase.from("page_heading").select("*").eq("page", "faq").eq("lang", lang).single();
+    if (headingError || !pageheading) {
         notFound();
     }
     return (
         <div>
             {" "}
-            <PageHeading img="/contacts.jpg" title="Frequently Asked Questions">
+            <PageHeading img={pageheading.image} title={pageheading.title}>
                 {pageheading.content.paragraph &&
                     pageheading.content.paragraph.map((item: any, index: number) => (
                         <p key={index} className={index > 0 ? "mt-4" : ""}>

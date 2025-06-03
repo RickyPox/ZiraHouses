@@ -1,16 +1,16 @@
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
 import Navbar_Layout from "./navbar_layout";
+import { getFilteredContentByLanguage } from "@/app/utils/getFilteredContentByLanguage";
 
-export default async function Navbar() {
-    const { data: navbar, error } = await supabase
-        .from("navbar")
-        .select("*")
-        .order("id", { ascending: true });
+export default async function Navbar({ language }: { language: string }) {
+    const { data: lang_select, error: LangSelectError } = await supabase.from("languages").select("*");
 
-    if (error || !navbar) {
+    if (LangSelectError || !lang_select) {
         notFound();
     }
 
-    return <Navbar_Layout navbar={navbar} />;
+    const navbar = (await getFilteredContentByLanguage("navbar", "path", language)) ?? [];
+
+    return <Navbar_Layout navbar={navbar} lang={lang_select} currentLang={language} />;
 }

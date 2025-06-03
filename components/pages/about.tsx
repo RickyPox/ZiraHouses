@@ -4,15 +4,15 @@ import PageHeading from "@/components/pageHeading";
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
 
-export default async function About() {
-    const { data: rooms, error: error1 } = await supabase.from("rooms").select("*").order("id", { ascending: true });
-    const { data: pageheading, error: error2 } = await supabase.from("page_heading").select("*").eq("id", 1).single();
+export default async function About({ lang }: { lang: string }) {
+    const { data: rooms, error: roomsError } = await supabase.from("rooms").select("*").eq("lang", lang).order("id", { ascending: true });
+    const { data: pageheading, error: headingError } = await supabase.from("page_heading").select("*").eq("page", "about").eq("lang", lang).single();
 
-    if (error1 || !rooms) {
+    if (roomsError || !rooms) {
         return { notFound };
     }
 
-    if (error2 || !pageheading) {
+    if (headingError || !pageheading) {
         return { notFound };
     }
 
@@ -47,8 +47,8 @@ export default async function About() {
                                 )}
                                 {room.content.amenities && (
                                     <div className="mt-4">
-                                        <p className="font-bold">Amenities:</p>
-                                        {room.content.amenities.map((amenitie: any, i: any) => (
+                                        <p className="font-bold">{room.content.amenities.title}</p>
+                                        {room.content.amenities.info.map((amenitie: any, i: any) => (
                                             <div key={i}>
                                                 <p>{amenitie}</p>
                                             </div>

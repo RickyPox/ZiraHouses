@@ -4,11 +4,11 @@ import Button from "@/components/button";
 import Card from "@/components/card";
 import PageHeading from "@/components/pageHeading";
 
-export default async function AroundUs() {
+export default async function AroundUs({ lang }: { lang: string }) {
     const { data: pages, error } = await supabase.from("around_us").select("*").order("id", { ascending: true });
-    const { data: pageheading, error: error2 } = await supabase.from("page_heading").select("*").eq("id", 2).single();
+    const { data: pageheading, error: headingError } = await supabase.from("page_heading").select("*").eq("page", "around").eq("lang", lang).single();
 
-    if (error || !pages) {
+    if (error || !pages || headingError || !pageheading) {
         return { notFound };
     }
 

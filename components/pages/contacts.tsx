@@ -2,9 +2,14 @@ import PageHeading from "@/components/pageHeading";
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
 
-export default async function Contacts() {
-    const { data: pageheading, error } = await supabase.from("page_heading").select("*").eq("id", 3).single();
-    if (error || !pageheading) {
+export default async function Contacts({ lang }: { lang: string }) {
+    const { data: pageheading, error: headingError } = await supabase
+        .from("page_heading")
+        .select("*")
+        .eq("page", "contacts")
+        .eq("lang", lang)
+        .single();
+    if (headingError || !pageheading) {
         notFound();
     }
     return (

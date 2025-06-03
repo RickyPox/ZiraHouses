@@ -5,8 +5,9 @@ import { useState } from "react";
 import AnimatedHamburgerButton from "@/components/menu";
 import { Instagram, Pinterest } from "./socialsLogos";
 import Button from "./button";
+import SwitchLanguage_Layout from "./switchLanguage";
 
-export default function Navbar_Layout({ navbar }: { navbar: any[] }) {
+export default function Navbar_Layout({ navbar, lang, currentLang }: { navbar: any[]; lang: any[]; currentLang: string }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -23,23 +24,16 @@ export default function Navbar_Layout({ navbar }: { navbar: any[] }) {
                     <Instagram black={isOpen ? true : false} />
                 </div>
                 <div className="col-start-3 col-span-7 flex justify-center">
-                    <Link href="/">
-                        <img
-                            className="w-[300px]"
-                            src={isOpen ? "/LogoBlack.png" : "/LogoWhite.png"}
-                        />
+                    <Link href={`/${currentLang}`}>
+                        <img className="w-[300px]" src={isOpen ? "/LogoBlack.png" : "/LogoWhite.png"} />
                     </Link>
                 </div>
                 <div className="col-start-10  space-x-[50px]  items-center lg:flex hidden">
-                    <p className={isOpen ? "text-black" : "text-white"}>PT</p>
-                    <p className={isOpen ? "text-black" : "text-white"}>ENG</p>
+                    <SwitchLanguage_Layout lang={lang} />
                 </div>
                 <div className="lg:col-start-11 col-start-10 flex lg:justify-start">
                     <div>
-                        <AnimatedHamburgerButton
-                            active={isOpen}
-                            setActive={setIsOpen}
-                        />
+                        <AnimatedHamburgerButton active={isOpen} setActive={setIsOpen} />
                     </div>
                 </div>
             </div>
@@ -57,42 +51,24 @@ export default function Navbar_Layout({ navbar }: { navbar: any[] }) {
                         >
                             <div className="col-start-2 col-span-9 flex flex-col items-center lg:justify-start lg:space-y-[3vw] lg:my-0 my-[20px] justify-between ">
                                 <div className="flex space-x-[50px] lg:hidden">
-                                    <p
-                                        className={
-                                            isOpen ? "text-black" : "text-white"
-                                        }
-                                    >
-                                        PT
-                                    </p>
-                                    <p
-                                        className={
-                                            isOpen ? "text-black" : "text-white"
-                                        }
-                                    >
-                                        ENG
-                                    </p>
+                                    <div className={isOpen ? "text-black" : "text-white"}>
+                                        <SwitchLanguage_Layout lang={lang} />
+                                    </div>
                                 </div>
                                 {navbar.map((item: any, i: any) => (
                                     <Link
                                         key={i}
-                                        href={item.href}
+                                        href={`/${item.lang_code}${item.path.startsWith("/") ? item.path : "/" + item.path}`}
                                         onMouseEnter={() => setHoveredIndex(i)}
-                                        onMouseLeave={() =>
-                                            setHoveredIndex(null)
-                                        }
+                                        onMouseLeave={() => setHoveredIndex(null)}
                                         onClick={handleIsOpen}
                                     >
-                                        <h2 className="text-black">
-                                            {item.title}
-                                        </h2>
+                                        <h2 className="text-black">{item.title}</h2>
                                         <motion.div
                                             className="h-[2px] bg-black"
                                             initial={{ width: 0 }}
                                             animate={{
-                                                width:
-                                                    hoveredIndex === i
-                                                        ? "100%"
-                                                        : 0,
+                                                width: hoveredIndex === i ? "100%" : 0,
                                             }}
                                             transition={{ duration: 0.3 }}
                                         />
