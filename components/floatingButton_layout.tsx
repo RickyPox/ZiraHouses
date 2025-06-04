@@ -10,7 +10,6 @@ export default function FloatingButton_layout(props: any) {
             const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = window.scrollY;
             const tenPercentHeight = scrollHeight * 0.1;
-            console.log(tenPercentHeight);
 
             if (scrolled > tenPercentHeight) {
                 setIsVisible(true);
