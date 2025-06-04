@@ -29,11 +29,6 @@ h1 {
     font-weight: 900;
     line-height: 110px;
     letter-spacing: -2px;
-
-    @media screen and (max-width: 768px) {
-        font-size: 64px;
-        line-height: 50px;
-    }
 }
 
 h2 {
@@ -42,9 +37,6 @@ h2 {
     font-size: 24px;
     font-weight: 900;
     text-transform: uppercase;
-    @media screen and (max-width: 768px) {
-        font-size: 20px;
-    }
 }
 
 h3 {
@@ -52,26 +44,61 @@ h3 {
     font-style: normal;
     font-size: 18px;
     font-weight: 900;
-    @media screen and (max-width: 768px) {
-        font-size: 16px;
-    }
 }
 
 p {
     font-family: "Roboto Mono", serif;
     font-style: normal;
     font-size: 16px;
-    @media screen and (max-width: 640px) {
-        font-size: 12px;
-    }
 }
 
 .common-margin {
     margin-right: 40px;
     margin-left: 40px;
-    @media screen and (max-width: 1279px) {
+}
+
+@media screen and (max-width: 1279px) {
+    .common-margin {
         margin-right: 10px;
         margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 72px;
+        line-height: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 60px;
+        line-height: 50px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 36px;
     }
 }
 

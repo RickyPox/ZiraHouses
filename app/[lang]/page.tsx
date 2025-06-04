@@ -23,7 +23,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
             <div className="relative col-start-1 col-span-full ">
                 <div className="relative">
                     <div className="bg-black/30 w-full h-full absolute top-0 left-0" />
-                    <img className="w-full lg:max-h-[900px] lg:h-auto md:h-[50vh] h-[50vh] object-cover" src={pageheading.image} />
+                    <img className="w-full lg:max-h-[900px] lg:h-[75vh] md:h-[55vh] h-[50vh] object-cover" src={pageheading.image} />
                 </div>
                 <div className="flex justify-center">
                     <div className="absolute top-[30%] lg:grid lg:gridLayout w-full max-w-[1920px]">
@@ -39,7 +39,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                                         </span>
                                     ))}
                             </h1>
-                            <div className="w-1/2">
+                            <div className="md:w-3/4 lg:w-1/2">
                                 <p className="text-white md:mt-[20px] mt-[10px] pr-[10px]">{pageheading.bold}</p>
                             </div>
                             <BookButton className="mt-[50px]" target="_blank" lang={lang}></BookButton>

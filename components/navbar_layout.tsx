@@ -18,7 +18,7 @@ export default function Navbar_Layout({ navbar, lang, currentLang, button }: { n
 
     return (
         <div className="relative text-white z-30 flex justify-center">
-            <div className="grid grid-cols-11 justify-start  absolute z-30 top-0 w-screen items-center max-w-[2560px]">
+            <div className="grid grid-cols-11 justify-start  absolute z-30 top-0 w-screen items-center max-w-[2560px] mt-[20px] gap-x-[20px] sm:gap-x-0">
                 <div className="col-start-2 col-span-1 lg:flex hidden justify-between items-center ">
                     <Pinterest black={isOpen ? true : false} />
                     <Instagram black={isOpen ? true : false} />

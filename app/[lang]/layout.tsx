@@ -71,7 +71,9 @@ export default async function LangLayout({ children, params }: { children: React
     return (
         <html lang={lang}>
             <body>
-                <Navbar language={lang} />
+                <div>
+                    <Navbar language={lang} />
+                </div>
                 {children}
                 <FloatingButton language={lang} />
                 <Footer language={lang} />
