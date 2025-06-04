@@ -17,7 +17,7 @@ export default async function About({ lang }: { lang: string }) {
 
     return (
         <div className="mb-[100px]">
-            <PageHeading img={pageheading.image} title={pageheading.title}>
+            <PageHeading lang={lang} img={pageheading.image} title={pageheading.title}>
                 {pageheading.content.map((item: any, index: any) => (
                     <p key={index} className={index > 0 ? "mt-4" : ""}>
                         {item.paragraph}

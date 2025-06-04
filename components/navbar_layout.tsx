@@ -7,7 +7,7 @@ import { Instagram, Pinterest } from "./socialsLogos";
 import Button from "./button";
 import SwitchLanguage_Layout from "./switchLanguage";
 
-export default function Navbar_Layout({ navbar, lang, currentLang }: { navbar: any[]; lang: any[]; currentLang: string }) {
+export default function Navbar_Layout({ navbar, lang, currentLang, button }: { navbar: any[]; lang: any[]; currentLang: string; button: any }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -75,10 +75,7 @@ export default function Navbar_Layout({ navbar, lang, currentLang }: { navbar: a
                                     </Link>
                                 ))}
 
-                                <Button
-                                    text="Book with us"
-                                    href="https://www.airbnb.com/rooms/904972187690070709?source_impression_id=p3_1746637459_P3IWiTHiExUXzYt5"
-                                ></Button>
+                                {button}
                                 <div className="flex lg:hidden space-x-[50px]">
                                     <Pinterest black />
                                     <Instagram black />

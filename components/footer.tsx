@@ -1,13 +1,11 @@
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
 import Footer_Layout from "./footer_layout";
+import { getFilteredContentByLanguage } from "@/app/utils/getFilteredContentByLanguage";
 
-export default async function Footer() {
-    const { data: footer, error } = await supabase.from("footer").select("*").order("id", { ascending: false });
-
-    if (error || !footer) {
-        notFound();
-    }
+export default async function Footer({ language }: { language: string }) {
+    /*   const { data: footer, error } = await supabase.from("footer").select("*").order("id", { ascending: false }); */
+    const footer = (await getFilteredContentByLanguage("footer", language)) ?? [];
 
     return <Footer_Layout footer={footer} />;
 }

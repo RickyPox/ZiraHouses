@@ -15,22 +15,15 @@ export default function Footer_Layout({ footer }: { footer: any[] }) {
                         <img className="w-[300px]" src="/LogoWhite.png" />
                         {footer.map((item, i) => (
                             <div key={i}>
-                                <Link
-                                    href={item.href}
-                                    onMouseEnter={() => setHoveredIndex(i)}
-                                    onMouseLeave={() => setHoveredIndex(null)}
-                                >
+                                <Link href={item.path} onMouseEnter={() => setHoveredIndex(i)} onMouseLeave={() => setHoveredIndex(null)}>
                                     <div className="flex flex-col">
-                                        <p className="text-white">
-                                            {item.title}
-                                        </p>
+                                        <p className="text-white">{item.title}</p>
                                     </div>
                                     <motion.div
                                         className="h-[1px] bg-white"
                                         initial={{ width: 0 }}
                                         animate={{
-                                            width:
-                                                hoveredIndex === i ? "100%" : 0,
+                                            width: hoveredIndex === i ? "100%" : 0,
                                         }}
                                         transition={{ duration: 0.3 }}
                                     />

@@ -80,29 +80,25 @@ export default async function Pagina({ params }: { params: Params }) {
     }
 
     // Buscar páginas e infos fixas paralelamente
-    const [{ data: allPages }, { data: fixedInfo }] = await Promise.all([
-        supabase.from("around_us").select("*"),
-        supabase.from("around_us_fixed_info").select("*"),
-    ]);
-
-    if (!allPages || !fixedInfo) notFound();
-
-    // Encontrar página e rota base pelo cleanPath
     const route = allRoutes.find((r) => r.path.replace(/^\//, "") === cleanPath);
-    const page = allPages.find((p) => p.path.replace(/^\//, "") === cleanPath);
+    if (!route) notFound();
 
-    if (!route || !page) notFound();
+    const { data: allPages } = await supabase.from("around_us").select("*");
+    const page = allPages?.find((p) => p.path.replace(/^\//, "") === cleanPath);
+    if (!page) notFound();
 
-    // Buscar conteúdo com base no route_key da rota encontrada
-    const { data: content, error: contentError } = await supabase
-        .from("around_us_content")
-        .select("*")
-        .eq("lang", lang)
-        .eq("categorie", route.route_key);
+    const { data: fixedInfo, error: fixedError } = await supabase.from("around_us_fixed_info").select("*").eq("categorie", route.route_key);
+
+    if (fixedError || !fixedInfo) notFound();
+
+    // NOVO: extrair os nomes relevantes para filtrar a próxima query
+    const fixedNames = fixedInfo.map((f) => f["INFO-PLACE-NAME"]);
+
+    const { data: content, error: contentError } = await supabase.from("around_us_content").select("*").eq("lang", lang).in("Info", fixedNames); // <- otimização aqui
 
     if (contentError || !content) notFound();
 
-    // Enriquecer o conteúdo
+    // Como já filtramos antes, agora é só mapear
     const enrichedContent = content.map((item) => {
         const fixed = fixedInfo.find((f) => f["INFO-PLACE-NAME"] === item.Info);
         return {
@@ -127,7 +123,6 @@ export default async function Pagina({ params }: { params: Params }) {
             website: fixed?.website || null,
         };
     });
-
     return (
         <div className="mb-[100px]">
             <PageHeading img={page.image_link} title={page.title}>

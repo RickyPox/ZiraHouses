@@ -1,3 +1,4 @@
+import { getFilteredContentByLanguage } from "@/app/utils/getFilteredContentByLanguage";
 import About from "@/components/pages/about";
 import AroundUs from "@/components/pages/around";
 import Contacts from "@/components/pages/contacts";

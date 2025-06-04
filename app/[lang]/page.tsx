@@ -5,6 +5,7 @@ import Reviews from "@/components/reviews";
 import { supabase } from "@/lib/supabaseClient";
 import { notFound, redirect } from "next/navigation";
 import { getFilteredContentByLanguage } from "../utils/getFilteredContentByLanguage";
+import BookButton from "@/components/bookButton";
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -41,11 +42,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                             <div className="w-1/2">
                                 <p className="text-white md:mt-[20px] mt-[10px] pr-[10px]">{pageheading.bold}</p>
                             </div>
-                            <Button
-                                className="mt-[50px]"
-                                text="Book with us"
-                                href="https://www.airbnb.com/rooms/904972187690070709?source_impression_id=p3_1746637459_P3IWiTHiExUXzYt5"
-                            ></Button>
+                            <BookButton className="mt-[50px]" target="_blank" lang={lang}></BookButton>
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@ import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
 import Navbar_Layout from "./navbar_layout";
 import { getFilteredContentByLanguage } from "@/app/utils/getFilteredContentByLanguage";
+import BookButton from "./bookButton";
 
 export default async function Navbar({ language }: { language: string }) {
     const { data: lang_select, error: LangSelectError } = await supabase.from("languages").select("*");
@@ -12,5 +13,12 @@ export default async function Navbar({ language }: { language: string }) {
 
     const navbar = (await getFilteredContentByLanguage("navbar", language)) ?? [];
 
-    return <Navbar_Layout navbar={navbar} lang={lang_select} currentLang={language} />;
+    return (
+        <Navbar_Layout
+            navbar={navbar}
+            lang={lang_select}
+            currentLang={language}
+            button={<BookButton target="_blank" lang={language} className=""></BookButton>}
+        />
+    );
 }
