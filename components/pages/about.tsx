@@ -1,6 +1,5 @@
 import BigCard from "@/components/bigcard";
 import PageHeading from "@/components/pageHeading";
-
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
 

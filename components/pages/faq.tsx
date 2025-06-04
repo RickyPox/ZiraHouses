@@ -1,10 +1,15 @@
-import Faq from "@/components/faq";
 import PageHeading from "@/components/pageHeading";
 import { supabase } from "@/lib/supabaseClient";
 import { notFound } from "next/navigation";
+import Faq_Layout from "../faq_layout";
 
 export default async function FAQ({ lang }: { lang: string }) {
     const { data: pageheading, error: headingError } = await supabase.from("page_heading").select("*").eq("page", "faq").eq("lang", lang).single();
+    const { data: faq, error } = await supabase.from("faq").select("*").eq("lang", lang).order("id", { ascending: true });
+
+    if (error || !faq) {
+        notFound();
+    }
     if (headingError || !pageheading) {
         notFound();
     }
@@ -29,7 +34,7 @@ export default async function FAQ({ lang }: { lang: string }) {
                     </p>
                 )}
             </PageHeading>
-            <Faq></Faq>
+            <Faq_Layout faq={faq} lang={lang} />
         </div>
     );
 }

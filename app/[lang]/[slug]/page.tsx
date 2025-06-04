@@ -10,25 +10,38 @@ import { notFound, redirect } from "next/navigation";
 export default async function DynamicPage({ params }: { params: Promise<{ lang: string; slug: string }> }) {
     const { lang, slug } = await params;
     const normalizedSlug = slug.startsWith("/") ? slug : `/${slug}`;
-    // Vai buscar a route correspondente ao slug (path)
-    const { data: route, error } = await supabase
-        .from("routes")
-        .select("route_key")
-        .eq("path", normalizedSlug)
-        .eq("lang_code", lang) // se estiveres a usar multilinguagem por coluna
-        .single();
-    console.log(route, error, slug, lang);
-    if (error || !route) {
+
+    // 1. Obter o route_key associado ao slug atual
+    const { data: routeEntry, error: routeError } = await supabase.from("routes").select("route_key").eq("path", normalizedSlug).single();
+
+    if (routeError || !routeEntry) {
         notFound();
     }
 
-    const { route_key } = route;
+    const { route_key } = routeEntry;
 
+    // 2. Procurar o path correto para esse route_key no idioma atual
+    const { data: correctLangRoute, error: langRouteError } = await supabase
+        .from("routes")
+        .select("path")
+        .eq("route_key", route_key)
+        .eq("lang_code", lang)
+        .single();
+
+    if (langRouteError || !correctLangRoute) {
+        notFound();
+    }
+
+    const correctPath = correctLangRoute.path;
+    // 3. Se o path atual não for o correto, redirecionar
+    if (correctPath !== normalizedSlug) {
+        return redirect(`/${lang}${correctPath}`);
+    }
     switch (route_key) {
         case "about":
             return await About({ lang });
         case "around":
-            return await AroundUs({ lang });
+            return await AroundUs({ lang, slug });
         case "contacts":
             return await Contacts({ lang });
         case "faq":

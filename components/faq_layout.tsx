@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
-export default function Faq_Layout({ faq }: { faq: any[] }) {
+export default function Faq_Layout({ faq, lang }: { faq: any[]; lang: string }) {
     const [activeIndex, setActiveIndex] = useState(null);
     const [openCategorie, setOpenCategorie] = useState(null);
 
@@ -126,9 +126,15 @@ export default function Faq_Layout({ faq }: { faq: any[] }) {
                                                                                             {" "}
                                                                                             <a
                                                                                                 className="underline bg-black text-white p-[5px]"
-                                                                                                href={answer.urls[index]}
+                                                                                                href={
+                                                                                                    answer.urls[index].startsWith("/")
+                                                                                                        ? `/${lang}${answer.urls[index]}`
+                                                                                                        : answer.urls[index]
+                                                                                                }
                                                                                                 rel="noopener noreferrer"
-                                                                                                target="_blank"
+                                                                                                target={
+                                                                                                    answer.urls[index].startsWith("/") ? "" : "_blank"
+                                                                                                }
                                                                                             >
                                                                                                 {answer.text_links[index]}
                                                                                             </a>{" "}

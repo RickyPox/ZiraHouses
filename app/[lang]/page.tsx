@@ -3,7 +3,7 @@ import Card from "@/components/card";
 import Carousel from "@/components/carousel";
 import Reviews from "@/components/reviews";
 import { supabase } from "@/lib/supabaseClient";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { getFilteredContentByLanguage } from "../utils/getFilteredContentByLanguage";
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
@@ -12,10 +12,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     const { data: pageheading, error } = await supabase.from("page_heading").select("*").eq("page", "home").eq("lang", lang).single();
 
     if (error || !pageheading) {
-        notFound();
+        redirect("/en");
     }
 
-    const pages = ((await getFilteredContentByLanguage("pages", "path", lang)) as any[]) ?? [];
+    const pages = ((await getFilteredContentByLanguage("pages", lang)) as any[]) ?? [];
 
     return (
         <div className="flex flex-col ">

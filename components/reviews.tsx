@@ -11,7 +11,7 @@ export default async function Reviews({ lang }: { lang: string }) {
     }
 
     if (error1 || !reviews) {
-        notFound();
+        return <h3>REVIEWS NOT FOUND</h3>;
     }
 
     return (

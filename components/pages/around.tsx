@@ -3,12 +3,14 @@ import { notFound } from "next/navigation";
 import Button from "@/components/button";
 import Card from "@/components/card";
 import PageHeading from "@/components/pageHeading";
+import { getFilteredContentByLanguage } from "@/app/utils/getFilteredContentByLanguage";
 
-export default async function AroundUs({ lang }: { lang: string }) {
-    const { data: pages, error } = await supabase.from("around_us").select("*").order("id", { ascending: true });
+export default async function AroundUs({ lang, slug }: { lang: string; slug: string }) {
+    const pages = await getFilteredContentByLanguage("around_us", lang);
+
     const { data: pageheading, error: headingError } = await supabase.from("page_heading").select("*").eq("page", "around").eq("lang", lang).single();
 
-    if (error || !pages || headingError || !pageheading) {
+    if (headingError || !pageheading || !pages) {
         return { notFound };
     }
 
@@ -29,7 +31,7 @@ export default async function AroundUs({ lang }: { lang: string }) {
                     {pages.map((page: any, i: any) => (
                         <div key={i} className="col-span-3">
                             <Card title={page.title} text={page.description} img={page.image_link}>
-                                <Button text="Explore" href={`around-us/${page.path}`}></Button>
+                                <Button text="Explore" href={`/${lang}/${slug}/${page.path}`}></Button>
                             </Card>
                         </div>
                     ))}

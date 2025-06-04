@@ -10,7 +10,7 @@ export default async function Navbar({ language }: { language: string }) {
         notFound();
     }
 
-    const navbar = (await getFilteredContentByLanguage("navbar", "path", language)) ?? [];
+    const navbar = (await getFilteredContentByLanguage("navbar", language)) ?? [];
 
     return <Navbar_Layout navbar={navbar} lang={lang_select} currentLang={language} />;
 }

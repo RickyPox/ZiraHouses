@@ -22,29 +22,28 @@ export default function SwitchLanguage({ lang }: { lang: Lang[] }) {
     }, []);
 
     const switchLanguage = (langCode: string) => {
-        const segments = pathname.split("/").filter(Boolean);
+        const segments = pathname.split("/").filter(Boolean); // Divide o caminho em segmentos
         const currentLang = lang.find((l) => l.lang_code === segments[0])?.lang_code;
-        const pathWithoutLang = currentLang ? segments.slice(1).join("/") : segments.join("/");
+        const pathSegments = currentLang ? segments.slice(1) : segments;
 
-        if (!pathWithoutLang) {
-            router.push(`/${langCode}`);
-            return;
-        }
+        const slug = pathSegments[0] || ""; // Primeiro segmento após o idioma
+        const subpath = pathSegments.slice(1).join("/"); // Restante do caminho
 
-        const currentRoute = routes.find((r) => r.lang_code === currentLang && r.path.replace(/^\//, "") === pathWithoutLang);
+        const currentRoute = routes.find((r) => r.lang_code === currentLang && r.path.replace(/^\//, "") === slug);
 
         if (!currentRoute) {
-            router.push(`/${langCode}/${pathWithoutLang}`);
+            // Se não encontrar a rota atual, mantém o slug e subpath
+            const newPath = [langCode, slug, subpath].filter(Boolean).join("/");
+            router.push(`/${newPath}`);
             return;
         }
 
         const translatedRoute = routes.find((r) => r.route_key === currentRoute.route_key && r.lang_code === langCode);
 
-        if (translatedRoute) {
-            router.push(`/${langCode}/${translatedRoute.path.replace(/^\//, "")}`);
-        } else {
-            router.push(`/${langCode}`);
-        }
+        const newSlug = translatedRoute ? translatedRoute.path.replace(/^\//, "") : slug;
+
+        const newPath = [langCode, newSlug, subpath].filter(Boolean).join("/");
+        router.push(`/${newPath}`);
     };
 
     return (
