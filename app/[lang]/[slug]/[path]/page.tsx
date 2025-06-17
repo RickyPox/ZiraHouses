@@ -88,7 +88,11 @@ export default async function Pagina({ params }: { params: Params }) {
     const fixedNames = fixedInfo.map((f) => f["INFO-PLACE-NAME"]);
     const ids = fixedInfo.map((f) => f.id);
 
-    const { data: content } = await supabase.from("around_us_content").select("title, Info, text").eq("lang", lang).in("Info", fixedNames);
+    const { data: content } = await supabase
+        .from("around_us_content")
+        .select("title, Info, text, extralink_text, extralink_url_text, extraText")
+        .eq("lang", lang)
+        .in("Info", fixedNames);
     if (!content) notFound();
 
     /* ─────────────────────────────
@@ -110,7 +114,7 @@ export default async function Pagina({ params }: { params: Params }) {
             title: item.title,
             text: item.text,
             image: fi?.image || null,
-            extratext: fi?.extraText || [],
+            extratext: item?.extraText || [],
             address: fi?.address_gps
                 ? {
                       gps: fi.address_gps,
@@ -121,8 +125,8 @@ export default async function Pagina({ params }: { params: Params }) {
             extralink: fi?.extralink_url
                 ? {
                       url: fi.extralink_url,
-                      text: fi.extralink_text,
-                      urlText: fi.extralink_url_text,
+                      text: item.extralink_text,
+                      urlText: item.extralink_url_text,
                   }
                 : null,
             website: fi?.website || null,
