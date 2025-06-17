@@ -3,16 +3,6 @@ import { notFound, redirect } from "next/navigation";
 import MansonryLayout from "@/components/masonry";
 import PageHeading from "@/components/pageHeading";
 
-export async function generateStaticParams() {
-    const { data, error } = await supabase.from("around_us").select("path");
-
-    if (error || !data) return [];
-
-    return data.map((item) => ({
-        path: item.path.replace(/^\//, ""),
-    }));
-}
-
 type Params = Promise<{ lang: string; slug: string; path: string }>;
 
 export default async function Pagina({ params }: { params: Params }) {
