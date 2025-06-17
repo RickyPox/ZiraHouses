@@ -73,46 +73,62 @@ export default async function Pagina({ params }: { params: Params }) {
     const route = allRoutes.find((r) => r.path.replace(/^\//, "") === cleanPath);
     if (!route) notFound();
 
-    const { data: allPages } = await supabase.from("around_us").select("*");
+    const { data: allPages } = await supabase.from("around_us").select("path, title, description, image_link");
     const page = allPages?.find((p) => p.path.replace(/^\//, "") === cleanPath);
     if (!page) notFound();
 
-    const { data: fixedInfo, error: fixedError } = await supabase.from("around_us_fixed_info").select("*").eq("categorie", route.route_key);
+    const { data: fixedInfo, error: fixedError } = await supabase
+        .from("around_us_fixed_info")
+        .select("*")
+        .eq("categorie", route.route_key)
+        .order("id");
 
     if (fixedError || !fixedInfo) notFound();
 
-    // NOVO: extrair os nomes relevantes para filtrar a próxima query
     const fixedNames = fixedInfo.map((f) => f["INFO-PLACE-NAME"]);
+    const ids = fixedInfo.map((f) => f.id);
 
-    const { data: content, error: contentError } = await supabase.from("around_us_content").select("*").eq("lang", lang).in("Info", fixedNames); // <- otimização aqui
+    const { data: content } = await supabase.from("around_us_content").select("title, Info, text").eq("lang", lang).in("Info", fixedNames);
+    if (!content) notFound();
 
-    if (contentError || !content) notFound();
+    /* ─────────────────────────────
+       5. Ordenação pelos ids
+    ──────────────────────────────*/
+    const contentByInfo = new Map(content.map((c) => [c.Info, c]));
+    const fixedInfoById = new Map(fixedInfo.map((f) => [f.id, f]));
 
-    // Como já filtramos antes, agora é só mapear
-    const enrichedContent = content.map((item) => {
-        const fixed = fixedInfo.find((f) => f["INFO-PLACE-NAME"] === item.Info);
+    const orderedContent = ids
+        .map((id) => {
+            const fi = fixedInfoById.get(id);
+            return fi ? contentByInfo.get(fi["INFO-PLACE-NAME"]) : null;
+        })
+        .filter(Boolean) as typeof content;
+
+    const enrichedContent = orderedContent.map((item) => {
+        const fi = fixedInfoById.get(fixedInfo.find((f) => f["INFO-PLACE-NAME"] === item.Info)!.id);
         return {
             title: item.title,
             text: item.text,
-            image: fixed?.image || null,
-            extratext: fixed?.extraText || [],
-            address: fixed?.address_gps
+            image: fi?.image || null,
+            extratext: fi?.extraText || [],
+            address: fi?.address_gps
                 ? {
-                      gps: fixed.address_gps,
-                      url: fixed.address_url,
-                      location: fixed.address_location,
+                      gps: fi.address_gps,
+                      url: fi.address_url,
+                      location: fi.address_location,
                   }
                 : null,
-            extralink: fixed?.extralink_url
+            extralink: fi?.extralink_url
                 ? {
-                      url: fixed.extralink_url,
-                      text: fixed.extralink_text,
-                      urlText: fixed.extralink_url_text,
+                      url: fi.extralink_url,
+                      text: fi.extralink_text,
+                      urlText: fi.extralink_url_text,
                   }
                 : null,
-            website: fixed?.website || null,
+            website: fi?.website || null,
         };
     });
+
     return (
         <div className="mb-[100px]">
             <PageHeading img={page.image_link} title={page.title}>

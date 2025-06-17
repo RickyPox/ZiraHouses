@@ -24,7 +24,7 @@ export default function Navbar_Layout({ navbar, lang, currentLang, button }: { n
                     <Instagram black={isOpen ? true : false} />
                 </div>
                 <div className="col-start-3 col-span-7 flex justify-center">
-                    <Link href={`/${currentLang}`}>
+                    <Link prefetch href={`/${currentLang}`}>
                         <img className="w-[300px]" src={isOpen ? "/LogoBlack.png" : "/LogoWhite.png"} />
                     </Link>
                 </div>
@@ -57,6 +57,7 @@ export default function Navbar_Layout({ navbar, lang, currentLang, button }: { n
                                 </div>
                                 {navbar.map((item: any, i: any) => (
                                     <Link
+                                        prefetch
                                         key={i}
                                         href={`/${item.lang_code}${item.path.startsWith("/") ? item.path : "/" + item.path}`}
                                         onMouseEnter={() => setHoveredIndex(i)}

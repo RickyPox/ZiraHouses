@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Instagram, Pinterest } from "./socialsLogos";
 
-export default function Footer_Layout({ footer }: { footer: any[] }) {
+export default function Footer_Layout({ footer, currentLang }: { footer: any[]; currentLang: string }) {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
@@ -12,10 +12,17 @@ export default function Footer_Layout({ footer }: { footer: any[] }) {
             <div className="">
                 <div className="w-screen grid grid-cols-11 py-[50px] max-w-[2560px]">
                     <div className="col-start-2 col-span-9 flex lg:flex-row flex-col lg:space-y-0 space-y-[50px] items-center justify-between ">
-                        <img className="w-[300px]" src="/LogoWhite.png" />
+                        <Link prefetch href={`/${currentLang}`}>
+                            <img className="w-[300px]" src="/LogoWhite.png" />
+                        </Link>
                         {footer.map((item, i) => (
                             <div key={i}>
-                                <Link href={item.path} onMouseEnter={() => setHoveredIndex(i)} onMouseLeave={() => setHoveredIndex(null)}>
+                                <Link
+                                    prefetch
+                                    href={`/${item.lang_code}${item.path.startsWith("/") ? item.path : "/" + item.path}`}
+                                    onMouseEnter={() => setHoveredIndex(i)}
+                                    onMouseLeave={() => setHoveredIndex(null)}
+                                >
                                     <div className="flex flex-col">
                                         <p className="text-white">{item.title}</p>
                                     </div>

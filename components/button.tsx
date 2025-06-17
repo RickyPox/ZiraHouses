@@ -7,7 +7,7 @@ export default function Button(props: any) {
 
     return (
         <div className="flex">
-            <Link href={props.href ? props.href : "#"} target={props.target ? props.target : ""}>
+            <Link prefetch href={props.href ? props.href : "#"} target={props.target ? props.target : ""}>
                 <div
                     className={`${props.className} bg-[#000000]  p-[8px] flex duration-300 ${isHovered ? "scale-110" : "scale-100"}`}
                     onMouseEnter={() => setIsHovered(true)}
